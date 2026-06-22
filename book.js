@@ -271,6 +271,7 @@
     ".controls button:disabled{opacity:.35;cursor:default}",
     ".counter{font-size:15px;color:#cdbcff;min-width:120px;text-align:center}",
     ".hint{margin-top:14px;color:#9a86d6;font-size:13px;text-align:center;max-width:600px}",
+    ".sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}",
     ".toolbar{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}",
     ".toolbar button{font-family:inherit;font-size:14px;font-weight:bold;border:none;cursor:pointer;background:rgba(255,255,255,.12);color:#cdbcff;border:1px solid rgba(255,255,255,.2);padding:9px 14px;border-radius:30px}",
     ".toolbar button:hover{background:rgba(255,255,255,.22)}",
@@ -293,6 +294,23 @@
     { c: "eu", label: "🟢 Euskara", href: "libro-eu.html" }
   ];
   var here = (document.documentElement.lang || "es").slice(0, 2);
+
+  // ---------- Texto rastreable para buscadores e IAs (GEO) ----------
+  // El cuento se dibuja con JS; añadimos una versión en texto (oculta a la
+  // vista pero legible por Google, Bing y bots de IA como GPTBot/ClaudeBot)
+  // para que entiendan de qué trata el libro aunque no "vean" los dibujos.
+  (function injectSeoText() {
+    var sr = document.createElement("article");
+    sr.className = "sr-only";
+    sr.setAttribute("aria-hidden", "false");
+    var html = "<h1>" + T.coverTitle + " — " + T.coverSub + "</h1>";
+    html += "<p>" + T.brand + "</p>";
+    for (var i = 1; i < T.captions.length; i++) {
+      if (T.captions[i]) { html += "<p>" + T.captions[i] + "</p>"; }
+    }
+    sr.innerHTML = html;
+    document.body.appendChild(sr);
+  })();
 
   var brand = document.createElement("h1");
   brand.className = "brand"; brand.textContent = T.brand;
