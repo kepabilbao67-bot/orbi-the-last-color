@@ -515,7 +515,8 @@
     lpanel.className = "orbi-panel";
     lpanel.innerHTML =
       '<div class="orbi-phead"><span>' + (L.lullabyTitle || "") + '</span>' +
-      '<button class="orbi-pclose">' + UI.close + '</button></div>' +
+      '<span><button class="orbi-pclose orbi-repeat" style="margin-right:6px">🔁</button>' +
+      '<button class="orbi-pclose">' + UI.close + '</button></span></div>' +
       '<div class="orbi-msgs" style="text-align:center;font-size:17px;line-height:1.9">' +
       L.lullaby.map(function (line) { return '<div>' + line + '</div>'; }).join("") +
       '</div>';
@@ -532,10 +533,30 @@
       var t = 0;
       for (var i = 0; i < seq.length; i++) { tone(seq[i], t, durs[i] * 0.95, "sine", 0.12); t += durs[i]; }
     }
+    var repeatOn = false;
+    function speakLullaby() {
+      if (!window.speechSynthesis) return;
+      speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(L.lullaby.join(". "));
+      var v = pickVoice(); if (v) u.voice = v;
+      var region = { es: "es-ES", en: "en-GB", ca: "ca-ES", gl: "gl-ES", eu: "eu-ES" }[LANG] || "es-ES";
+      u.lang = (v && v.lang) || region;
+      u.pitch = 1.5; u.rate = 0.85;
+      u.onend = function () { if (repeatOn && lpanel.classList.contains("open")) { setTimeout(playLullaby, 900); } };
+      speechSynthesis.speak(u);
+    }
+    function playLullaby() { playMelody(); speakLullaby(); }
+    var repeatBtn = lpanel.querySelector(".orbi-repeat");
+    repeatBtn.addEventListener("click", function () {
+      repeatOn = !repeatOn;
+      repeatBtn.style.background = repeatOn ? "#ffd84d" : "rgba(255,255,255,.2)";
+      repeatBtn.style.color = repeatOn ? "#5a3000" : "#fff";
+      if (repeatOn && lpanel.classList.contains("open")) playLullaby();
+    });
     lullBtn.addEventListener("click", function () {
       var open = lpanel.classList.toggle("open");
-      if (open) { playMelody(); speak(L.lullaby.join(". ")); }
-      else { stopSpeak(); }
+      if (open) { playLullaby(); }
+      else { stopSpeak(); repeatOn = false; repeatBtn.style.background = "rgba(255,255,255,.2)"; repeatBtn.style.color = "#fff"; }
     });
   }
 })();

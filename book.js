@@ -270,7 +270,17 @@
     ".controls button:active{transform:translateY(3px);box-shadow:0 2px 0 #d98a00}",
     ".controls button:disabled{opacity:.35;cursor:default}",
     ".counter{font-size:15px;color:#cdbcff;min-width:120px;text-align:center}",
-    ".hint{margin-top:14px;color:#9a86d6;font-size:13px;text-align:center;max-width:600px}"
+    ".hint{margin-top:14px;color:#9a86d6;font-size:13px;text-align:center;max-width:600px}",
+    ".toolbar{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}",
+    ".toolbar button{font-family:inherit;font-size:14px;font-weight:bold;border:none;cursor:pointer;background:rgba(255,255,255,.12);color:#cdbcff;border:1px solid rgba(255,255,255,.2);padding:9px 14px;border-radius:30px}",
+    ".toolbar button:hover{background:rgba(255,255,255,.22)}",
+    "body.night{filter:brightness(.55) saturate(.85)}",
+    ".palette{position:absolute;left:0;right:0;bottom:10px;z-index:4;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 10px}",
+    ".swatch{width:34px;height:34px;border-radius:50%;border:3px solid #fff;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.4)}",
+    ".swatch.sel{transform:scale(1.25);outline:2px solid #ffd84d}",
+    ".swatch.eraser{background:#fff;font-size:16px;display:flex;align-items:center;justify-content:center}",
+    ".fillable{cursor:pointer}",
+    "@media print{body{background:#fff!important;filter:none!important}.brand,.langbar,.controls,.hint,.toolbar,.orbi-bar,.orbi-panel,.palette{display:none!important}.book{width:100%!important;box-shadow:none!important;border-radius:0!important}.page{display:flex!important;position:relative!important;page-break-after:always;height:96vh;border-bottom:1px solid #ccc}.page svg{position:relative!important}.caption{background:#fff!important;color:#000!important;box-shadow:none!important}}"
   ].join("");
   document.head.appendChild(css);
 
@@ -308,6 +318,35 @@
   hint.className = "hint"; hint.textContent = T.hint;
   document.body.appendChild(hint);
 
+  // Textos extra (colorear / botones) con respaldo por idioma
+  var EXTRA = {
+    es: { color: "🎨 ¡Colorea tú!", colorWord: "¡Colorea!", colorCap: "¡Ahora te toca a ti! Elige un color y toca el dibujo para pintarlo. 🎨", full: "⛶ Pantalla completa", night: "🌙 Modo noche", day: "☀️ Modo día", print: "🖨️ Guardar PDF / Imprimir", erase: "Borrar" },
+    en: { color: "🎨 Color it!", colorWord: "Color!", colorCap: "Now it's your turn! Pick a color and tap the picture to paint it. 🎨", full: "⛶ Fullscreen", night: "🌙 Night mode", day: "☀️ Day mode", print: "🖨️ Save PDF / Print", erase: "Erase" },
+    ca: { color: "🎨 Pinta-ho!", colorWord: "Pinta!", colorCap: "Ara et toca a tu! Tria un color i toca el dibuix per pintar-lo. 🎨", full: "⛶ Pantalla completa", night: "🌙 Mode nit", day: "☀️ Mode dia", print: "🖨️ Desa PDF / Imprimeix", erase: "Esborra" },
+    gl: { color: "🎨 Colorea ti!", colorWord: "Colorea!", colorCap: "Agora tócache a ti! Escolle unha cor e toca o debuxo para pintalo. 🎨", full: "⛶ Pantalla completa", night: "🌙 Modo noite", day: "☀️ Modo día", print: "🖨️ Gardar PDF / Imprimir", erase: "Borrar" },
+    eu: { color: "🎨 Margotu zuk!", colorWord: "Margotu!", colorCap: "Orain zure txanda da! Aukeratu kolore bat eta ukitu marrazkia margotzeko. 🎨", full: "⛶ Pantaila osoa", night: "🌙 Gau modua", day: "☀️ Egun modua", print: "🖨️ Gorde PDF / Inprimatu", erase: "Ezabatu" }
+  }[here] || null;
+
+  var toolbar = document.createElement("div");
+  toolbar.className = "toolbar";
+  toolbar.innerHTML =
+    '<button id="btnFull">' + (EXTRA ? EXTRA.full : "⛶") + '</button>' +
+    '<button id="btnNight">' + (EXTRA ? EXTRA.night : "🌙") + '</button>' +
+    '<button id="btnPrint">' + (EXTRA ? EXTRA.print : "🖨️") + '</button>';
+  document.body.appendChild(toolbar);
+
+  toolbar.querySelector("#btnFull").addEventListener("click", function () {
+    if (!document.fullscreenElement) {
+      (document.documentElement.requestFullscreen || function () {}).call(document.documentElement);
+    } else if (document.exitFullscreen) { document.exitFullscreen(); }
+  });
+  var nightBtn = toolbar.querySelector("#btnNight");
+  nightBtn.addEventListener("click", function () {
+    document.body.classList.toggle("night");
+    nightBtn.textContent = document.body.classList.contains("night") ? (EXTRA ? EXTRA.day : "☀️") : (EXTRA ? EXTRA.night : "🌙");
+  });
+  toolbar.querySelector("#btnPrint").addEventListener("click", function () { window.print(); });
+
   ART.forEach(function (art, i) {
     var div = document.createElement("div");
     var isCover = (i === 0);
@@ -324,6 +363,54 @@
     book.appendChild(div);
   });
 
+  // ---------- Página para COLOREAR ----------
+  var colorArt =
+    '<rect width="800" height="800" fill="#ffffff"/>' +
+    // sol
+    '<circle cx="170" cy="160" r="80" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    '<g stroke="#333" stroke-width="4"><line x1="170" y1="50" x2="170" y2="15"/><line x1="60" y1="160" x2="25" y2="160"/><line x1="280" y1="160" x2="315" y2="160"/><line x1="95" y1="85" x2="70" y2="60"/><line x1="245" y1="85" x2="270" y2="60"/></g>' +
+    // estrellas
+    '<polygon points="600,90 612,128 652,128 620,152 632,190 600,166 568,190 580,152 548,128 588,128" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    '<polygon points="700,300 709,328 739,328 715,346 724,374 700,357 676,374 685,346 661,328 691,328" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    // planeta
+    '<circle cx="160" cy="430" r="70" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    '<ellipse cx="160" cy="430" rx="110" ry="26" fill="none" stroke="#333" stroke-width="4"/>' +
+    // cohete
+    '<g transform="translate(440,470)"><path d="M0 -150 Q55 -70 55 60 L-55 60 Q-55 -70 0 -150 Z" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    '<circle cx="0" cy="-50" r="28" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    '<path d="M-55 30 L-95 90 L-45 70 Z" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    '<path d="M55 30 L95 90 L45 70 Z" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>' +
+    '<path d="M-26 60 Q0 140 26 60 Z" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/></g>' +
+    // suelo / colina
+    '<path d="M0 700 Q400 620 800 700 L800 800 L0 800 Z" class="fillable" fill="#ffffff" stroke="#333" stroke-width="4"/>';
+
+  var colorDiv = document.createElement("div");
+  colorDiv.className = "page";
+  var palColors = ["#ff5a5a", "#ff8a3a", "#ffd84d", "#5ad15a", "#3ad1c8", "#7fd4ff", "#9b6bff", "#ff5a8a", "#8a5a3a", "#333333"];
+  var swatches = palColors.map(function (c) { return '<div class="swatch" data-c="' + c + '" style="background:' + c + '"></div>'; }).join("");
+  swatches += '<div class="swatch eraser" data-c="#ffffff" title="' + (EXTRA ? EXTRA.erase : "Erase") + '">🧽</div>';
+  colorDiv.innerHTML =
+    '<svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">' + colorArt + '</svg>' +
+    '<div class="palette">' + swatches + '</div>' +
+    '<div class="caption">' + (EXTRA ? EXTRA.colorCap : "🎨") + '</div>';
+  book.appendChild(colorDiv);
+
+  // lógica de pintar
+  var currentColor = palColors[0];
+  colorDiv.querySelectorAll(".swatch").forEach(function (sw) {
+    sw.addEventListener("click", function () {
+      currentColor = sw.getAttribute("data-c");
+      colorDiv.querySelectorAll(".swatch").forEach(function (s) { s.classList.remove("sel"); });
+      sw.classList.add("sel");
+    });
+  });
+  colorDiv.querySelector(".swatch").classList.add("sel");
+  colorDiv.querySelectorAll(".fillable").forEach(function (shape) {
+    var paint = function () { shape.setAttribute("fill", currentColor); };
+    shape.addEventListener("click", paint);
+    shape.addEventListener("touchstart", function (e) { e.preventDefault(); paint(); }, { passive: false });
+  });
+
   // ---------- Navegación ----------
   var cur = 0;
   var pagesEls = book.querySelectorAll(".page");
@@ -335,7 +422,10 @@
     pagesEls[cur].classList.remove("active");
     cur = Math.max(0, Math.min(total - 1, n));
     pagesEls[cur].classList.add("active");
-    counter.textContent = cur === 0 ? T.coverWord : (cur === total - 1 ? T.endWord : (T.pageWord + " " + cur + " / " + (total - 2)));
+    if (cur === 0) counter.textContent = T.coverWord;
+    else if (cur === total - 1) counter.textContent = (EXTRA ? EXTRA.colorWord : "🎨");
+    else if (cur === total - 2) counter.textContent = T.endWord;
+    else counter.textContent = T.pageWord + " " + cur;
     prevBtn.disabled = cur === 0;
     nextBtn.disabled = cur === total - 1;
   }
