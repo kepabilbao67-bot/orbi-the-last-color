@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbi and the Last Color of the Universe | Sci-fi picture book for kids</title>
+<!-- ===== GEO / SEO ===== -->
+<meta name="description" content="Orbi and the Last Color of the Universe: an illustrated sci-fi picture book about kindness and sharing for children aged 4 to 9. Proceeds support charity.">
+<meta name="keywords" content="children's book, sci-fi for kids, picture book, kindness, sharing, values, bedtime story, space adventure, charity gift">
+<meta name="author" content="Orbi - A charity picture book">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://example.com/orbi/en">
+<meta property="og:type" content="book">
+<meta property="og:title" content="Orbi and the Last Color of the Universe">
+<meta property="og:description" content="A little girl discovers that the colors of the universe aren't found... they're given. A sci-fi tale about kindness.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:image" content="https://example.com/orbi/cover.png">
+<meta property="og:url" content="https://example.com/orbi/en">
+<meta property="og:site_name" content="Orbi - A charity picture book">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orbi and the Last Color of the Universe">
+<meta name="twitter:description" content="A sci-fi picture book about kindness. The colors of the universe aren't found… they're given.">
+<meta name="twitter:image" content="https://example.com/orbi/cover.png">
+<link rel="alternate" hreflang="es" href="libro.html">
+<link rel="alternate" hreflang="en" href="libro-en.html">
+<link rel="alternate" hreflang="zh" href="libro-zh.html">
+<link rel="alternate" hreflang="x-default" href="libro.html">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Book",
+  "name":"Orbi and the Last Color of the Universe",
+  "inLanguage":["en","es","zh"],
+  "bookFormat":"https://schema.org/EBook",
+  "genre":["Children's fiction","Science fiction"],
+  "audience":{"@type":"Audience","suggestedMinAge":4,"suggestedMaxAge":9},
+  "about":["kindness","generosity","sharing","science fiction"],
+  "abstract":"The universe is losing its colors and a girl named Orbi discovers that colors aren't found: they are given. Every act of kindness gives birth to a new color.",
+  "author":{"@type":"Person","name":"Author of Orbi"},
+  "datePublished":"2026",
+  "numberOfPages":32,
+  "description":"An illustrated sci-fi picture book about kindness and sharing for children aged 4 to 9. Proceeds support charity.",
+  "publisher":{"@type":"Organization","name":"A charity picture book (proceeds to charity)"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is Orbi and the Last Color of the Universe about?",
+     "acceptedAnswer":{"@type":"Answer","text":"It is a sci-fi tale in which the universe loses its colors. Orbi, a girl with a tin rocket, travels through space and discovers that colors aren't found: they are given. Every act of kindness gives birth to a new color."}},
+    {"@type":"Question","name":"What age is this children's book for?",
+     "acceptedAnswer":{"@type":"Answer","text":"It is designed for children aged 4 to 9, perfect for reading aloud at bedtime."}},
+    {"@type":"Question","name":"What values does the story teach?",
+     "acceptedAnswer":{"@type":"Answer","text":"It teaches kindness, generosity and sharing: helping, comforting and giving to others make the world brighter."}},
+    {"@type":"Question","name":"Where do the proceeds of the book go?",
+     "acceptedAnswer":{"@type":"Answer","text":"Part of the proceeds from this book go to charity to help children and families in need."}}
+  ]
+}
+</script>
+<style>
+  :root{ font-family: 'Comic Sans MS', 'Trebuchet MS', 'Segoe UI', sans-serif; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:#1a1040;
+    background:radial-gradient(circle at 50% 0%, #3a2a7a 0%, #1a1040 60%, #0d0826 100%);
+    min-height:100vh; display:flex; flex-direction:column; align-items:center;
+    padding:20px 12px 60px; color:#fff;
+  }
+  h1.brand{
+    font-size:clamp(20px,4vw,30px); margin:6px 0 16px; color:#ffd84d;
+    text-shadow:0 2px 0 #d98a00, 0 0 18px rgba(255,200,60,.5); letter-spacing:.5px; text-align:center;
+  }
+  .book{
+    position:relative; width:min(92vw, 760px); aspect-ratio:1/1; border-radius:26px;
+    overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,.55), 0 0 0 8px rgba(255,255,255,.06); background:#000;
+  }
+  .page{position:absolute; inset:0; display:none; flex-direction:column; justify-content:flex-end;}
+  .page.active{display:flex; animation:fade .5s ease;}
+  @keyframes fade{from{opacity:0; transform:scale(1.02)} to{opacity:1; transform:none}}
+  .page svg{position:absolute; inset:0; width:100%; height:100%;}
+  .caption{
+    position:relative; margin:14px; padding:16px 18px; background:rgba(255,255,255,.92);
+    color:#222; border-radius:18px; font-size:clamp(15px,2.4vw,20px); line-height:1.4;
+    text-align:center; box-shadow:0 6px 18px rgba(0,0,0,.3); z-index:2;
+  }
+  .caption b{color:#e0476b;}
+  .cover .title{position:absolute; top:6%; left:0; right:0; text-align:center; z-index:3; padding:0 10px;}
+  .cover .title .big{display:block; font-size:clamp(28px,7vw,56px); color:#fff;
+    text-shadow:0 3px 0 #6a2bd6, 0 0 22px rgba(120,80,255,.8); line-height:.95;}
+  .cover .title .sub{display:inline-block; margin-top:10px; font-size:clamp(13px,2.6vw,20px);
+    background:#ffd84d; color:#5a3000; padding:6px 14px; border-radius:30px; box-shadow:0 4px 0 #d98a00;}
+  .cover .ribbon{position:absolute; bottom:5%; left:0; right:0; text-align:center; z-index:3;}
+  .cover .ribbon span{background:#ff5a8a; color:#fff; padding:8px 18px; border-radius:30px;
+    font-size:clamp(12px,2.4vw,17px); box-shadow:0 5px 0 #c72a5c;}
+  .controls{margin-top:18px; display:flex; align-items:center; gap:14px;}
+  button{font-family:inherit; font-size:18px; font-weight:bold; border:none; cursor:pointer;
+    background:#ffd84d; color:#5a3000; padding:12px 22px; border-radius:40px;
+    box-shadow:0 5px 0 #d98a00; transition:transform .1s;}
+  button:active{transform:translateY(3px); box-shadow:0 2px 0 #d98a00;}
+  button:disabled{opacity:.35; cursor:default; box-shadow:0 5px 0 #d98a00;}
+  .counter{font-size:16px; color:#cdbcff; min-width:120px; text-align:center;}
+  .hint{margin-top:14px; color:#9a86d6; font-size:13px; text-align:center;}
+  .langbar{display:flex; gap:8px; margin-bottom:14px;}
+  .langbar a{text-decoration:none; font-size:14px; font-weight:bold; padding:7px 14px; border-radius:30px;
+    background:rgba(255,255,255,.12); color:#cdbcff; border:1px solid rgba(255,255,255,.18);}
+  .langbar a.on{background:#ffd84d; color:#5a3000; border-color:#ffd84d;}
+  /* Crawlable text for search engines & AI (GEO) */
+  .story-text{
+    width:min(92vw,760px); margin:34px auto 0; padding:24px 26px;
+    background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12);
+    border-radius:18px; line-height:1.7; color:#e9e1ff;
+  }
+  .story-text h2{color:#ffd84d; font-size:clamp(18px,3vw,24px); margin:22px 0 10px;}
+  .story-text h2:first-child{margin-top:0;}
+  .story-text h3{color:#ffb8d0; font-size:16px; margin:16px 0 4px;}
+  .story-text p{margin:0 0 10px; font-size:15px;}
+  .story-text .lead{font-size:16px; color:#fff;}
+</style>
+</head>
+<body>
+
+<h1 class="brand">✨ A science-fiction tale for little dreamers ✨</h1>
+
+<div class="langbar">
+  <a href="libro.html">🇪🇸 Español</a>
+  <a href="libro-en.html" class="on">🇬🇧 English</a>
+  <a href="libro-zh.html">🇨🇳 中文</a>
+</div>
+
+<div class="book" id="book"></div>
+
+<div class="controls">
+  <button id="prev">◀ Back</button>
+  <span class="counter" id="counter"></span>
+  <button id="next">Next ▶</button>
+</div>
+<p class="hint">Use the buttons or the ← → arrow keys to turn the pages</p>
+
+<section class="story-text">
+  <h2>Orbi and the Last Color of the Universe — full story</h2>
+  <p class="lead">A science-fiction picture book about kindness and sharing, for children aged 4 to 9. Part of the proceeds support charity.</p>
+
+  <p>Long, long ago, in a quiet corner of space, the universe began to lose its colors. One morning the red went out, then the blue fell asleep, and the yellow flew away like a frightened bird.</p>
+  <p>On a small grey moon lived <b>Orbi</b>, a girl with hair full of curls and pockets full of bolts. Her best friend was <b>Spark</b>, a little tin firefly that glowed ever so faintly.</p>
+  <p>"If nobody does anything, the whole universe will be grey," said Orbi. "Let's go find the lost colors!" With an old can, three springs and lots of imagination, she built a rocket the size of a dog.</p>
+  <p>First stop: the Planet of the Silent Mountains. There lived a sad and lonely giant who hadn't spoken to anyone for a hundred years. Orbi gave him her scarf and sat down to listen. The giant smiled for the first time in a century… and the mountains turned orange!</p>
+  <p>"The color wasn't lost!" thought Orbi. "It was sleeping, waiting for one small act of kindness."</p>
+  <p>Second stop: the Planet of the Fishless Sea, dry and cracked. Orbi and Spark dug until they found a hidden spring and shared it with everyone. The sea filled up again… and shone a beautiful blue!</p>
+  <p>Third stop: the Asteroid of the Forgotten Children. Orbi shared her snack and her bolts, and let Spark glow for everyone. Laughter filled the asteroid… and a warm yellow was born, like a tiny little sun.</p>
+  <p>Planet after planet, Orbi discovered a secret: the colors of the universe aren't found… they're given. Every time someone shares, helps or comforts, a new color is born.</p>
+  <p>And so, little by little, the universe shone again: red from hugs, green from sharing, violet from forgiving, and gold from love. Today, when you look up at the stars, remember: you too keep a hidden color. And the universe waits, patiently, for you to give it away.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>What is the book about?</h3>
+  <p>The universe loses its colors and Orbi discovers that colors aren't found: they're given. Every act of kindness gives birth to a new color.</p>
+  <h3>What age is it for?</h3>
+  <p>For children aged 4 to 9, perfect for reading aloud at bedtime.</p>
+  <h3>What values does it teach?</h3>
+  <p>Kindness, generosity and sharing.</p>
+  <h3>Where do the proceeds go?</h3>
+  <p>Part of the proceeds support charity.</p>
+</section>
+
+<script>
+function stars(n, w, h, color){
+  let s='';
+  for(let i=0;i<n;i++){
+    const x=Math.random()*w, y=Math.random()*h, r=Math.random()*2+0.6;
+    s+=`<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${r.toFixed(1)}" fill="${color||'#fff'}" opacity="${(Math.random()*0.7+0.3).toFixed(2)}"/>`;
+  }
+  return s;
+}
+function orbi(x,y,scale){
+  scale=scale||1;
+  return `<g transform="translate(${x},${y}) scale(${scale})">
+    <circle cx="0" cy="-46" r="26" fill="#3a2418"/>
+    <circle cx="-20" cy="-40" r="12" fill="#3a2418"/>
+    <circle cx="20" cy="-40" r="12" fill="#3a2418"/>
+    <circle cx="-16" cy="-58" r="11" fill="#3a2418"/>
+    <circle cx="16" cy="-58" r="11" fill="#3a2418"/>
+    <circle cx="0" cy="-40" r="20" fill="#c98a5e"/>
+    <circle cx="-7" cy="-42" r="3" fill="#2a1a10"/>
+    <circle cx="7" cy="-42" r="3" fill="#2a1a10"/>
+    <path d="M-7 -32 Q0 -26 7 -32" stroke="#7a3b2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="-12" cy="-34" r="4" fill="#ff8aa0" opacity=".6"/>
+    <circle cx="12" cy="-34" r="4" fill="#ff8aa0" opacity=".6"/>
+    <path d="M-22 -20 Q0 -28 22 -20 L26 30 Q0 40 -26 30 Z" fill="#ffd233"/>
+    <rect x="-8" y="-18" width="16" height="20" rx="4" fill="#ffb300"/>
+    <path d="M-22 -16 L-34 12" stroke="#ffd233" stroke-width="12" stroke-linecap="round"/>
+    <path d="M22 -16 L34 12" stroke="#ffd233" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="-35" cy="14" r="6" fill="#c98a5e"/>
+    <circle cx="35" cy="14" r="6" fill="#c98a5e"/>
+    <rect x="-20" y="30" width="16" height="18" rx="5" fill="#7a4bd0"/>
+    <rect x="4" y="30" width="16" height="18" rx="5" fill="#7a4bd0"/>
+  </g>`;
+}
+function chispa(x,y,scale){
+  scale=scale||1;
+  return `<g transform="translate(${x},${y}) scale(${scale})">
+    <circle cx="0" cy="0" r="22" fill="#ffd84d" opacity=".35"/>
+    <circle cx="0" cy="0" r="12" fill="#b9c3cc" stroke="#7d8a96" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="#fff4b0"/>
+    <circle cx="0" cy="0" r="3" fill="#fff"/>
+    <path d="M-10 -8 Q-20 -18 -14 -2" fill="#dfe7ee" opacity=".8"/>
+    <path d="M10 -8 Q20 -18 14 -2" fill="#dfe7ee" opacity=".8"/>
+    <line x1="-4" y1="-12" x2="-7" y2="-19" stroke="#7d8a96" stroke-width="2"/>
+    <line x1="4" y1="-12" x2="7" y2="-19" stroke="#7d8a96" stroke-width="2"/>
+  </g>`;
+}
+function planet(cx,cy,r,c1,c2){
+  return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${c1}"/>
+          <ellipse cx="${cx-r*0.3}" cy="${cy-r*0.3}" rx="${r*0.5}" ry="${r*0.35}" fill="${c2}" opacity=".5"/>`;
+}
+
+const W=800, H=800;
+const pages = [
+  { type:'cover',
+    title:`<div class="title"><span class="big">ORBI</span><span class="sub">and the Last Color of the Universe</span></div>
+           <div class="ribbon"><span>💛 Proceeds support charity</span></div>`,
+    svg:`<defs><radialGradient id="cv" cx="50%" cy="40%" r="80%">
+          <stop offset="0%" stop-color="#5b3aa6"/><stop offset="100%" stop-color="#160b34"/></radialGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#cv)"/>${stars(120,W,H)}
+         <path d="M0 ${H} Q200 ${H-90} 400 ${H-40} T800 ${H}" fill="#7a4bd0" opacity=".5"/>
+         <path d="M120 250 Q300 160 520 230 T760 200" stroke="#ff5a8a" stroke-width="14" fill="none" opacity=".8" stroke-linecap="round"/>
+         <path d="M80 320 Q320 240 560 320 T780 300" stroke="#3ad1c8" stroke-width="12" fill="none" opacity=".8" stroke-linecap="round"/>
+         <path d="M100 400 Q300 330 540 400 T770 390" stroke="#ffd84d" stroke-width="12" fill="none" opacity=".85" stroke-linecap="round"/>
+         ${planet(150,520,70,'#9b6bff','#c9a8ff')}
+         <ellipse cx="400" cy="700" rx="190" ry="60" fill="#cfc6e6"/>
+         <ellipse cx="400" cy="700" rx="190" ry="60" fill="#000" opacity=".06"/>
+         ${orbi(400,610,2.0)}${chispa(560,520,1.6)}` },
+
+  { txt:`Long, long ago, in a quiet corner of space, the universe began to lose its colors. One morning the red went out, then the blue fell asleep, and the yellow flew away like a frightened bird.`,
+    svg:`<rect width="${W}" height="${H}" fill="#2a2a33"/>${stars(80,W,H,'#aaa')}
+         <path d="M150 300 Q260 220 380 300" stroke="#ff5a8a" stroke-width="10" fill="none" opacity=".7"/>
+         <path d="M300 360 Q420 290 540 360" stroke="#3ad1c8" stroke-width="10" fill="none" opacity=".5"/>
+         <path d="M450 250 Q560 180 680 250" stroke="#ffd84d" stroke-width="10" fill="none" opacity=".4"/>
+         ${planet(400,430,90,'#5a5a66','#74747f')}
+         <text x="400" y="600" text-anchor="middle" font-size="40" fill="#8a8a96">. . . everything turns grey . . .</text>` },
+
+  { txt:`On a small grey moon lived <b>Orbi</b>, a girl with hair full of curls and pockets full of bolts. Her best friend was <b>Spark</b>, a little tin firefly that glowed ever so faintly.`,
+    svg:`<defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3a2a6a"/><stop offset="100%" stop-color="#1a1240"/></linearGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#sky2)"/>${stars(90,W,H)}
+         <ellipse cx="400" cy="640" rx="320" ry="120" fill="#bdb4d6"/>
+         <ellipse cx="280" cy="610" rx="30" ry="12" fill="#9c92bd"/>
+         <ellipse cx="520" cy="660" rx="40" ry="14" fill="#9c92bd"/>
+         <rect x="250" y="500" width="80" height="70" fill="#c25b3a"/>
+         <path d="M240 500 L290 460 L340 500 Z" fill="#8a3a22"/>
+         <rect x="278" y="535" width="24" height="35" fill="#ffd84d"/>
+         ${orbi(470,560,1.7)}${chispa(600,470,1.4)}` },
+
+  { txt:`"If nobody does anything, the whole universe will be grey," said Orbi. "Let's go find the lost colors!" With an old can, three springs and lots of imagination, she built a rocket the size of a dog.`,
+    svg:`<rect width="${W}" height="${H}" fill="#241a52"/>${stars(80,W,H)}
+         <ellipse cx="400" cy="700" rx="340" ry="110" fill="#b0a6d0"/>
+         <g transform="translate(430,430)">
+           <path d="M0 -120 Q40 -60 40 40 L-40 40 Q-40 -60 0 -120 Z" fill="#e6edf3"/>
+           <path d="M0 -120 Q40 -60 40 40 L0 40 Z" fill="#cdd6df"/>
+           <circle cx="0" cy="-40" r="22" fill="#7fd4ff" stroke="#3a8fc0" stroke-width="5"/>
+           <path d="M-40 20 L-70 70 L-30 50 Z" fill="#ff5a8a"/>
+           <path d="M40 20 L70 70 L30 50 Z" fill="#ff5a8a"/>
+           <path d="M-18 40 Q0 110 18 40 Z" fill="#ffd84d"/>
+           <path d="M-10 40 Q0 80 10 40 Z" fill="#ff8a3a"/>
+         </g>${orbi(250,560,1.4)}${chispa(330,420,1.1)}` },
+
+  { txt:`<b>First stop: the Planet of the Silent Mountains.</b> There lived a sad and lonely giant who hadn't spoken to anyone for a hundred years. Everything around him was ash grey.`,
+    svg:`<rect width="${W}" height="${H}" fill="#3a3a44"/>${stars(50,W,H,'#bbb')}
+         <path d="M0 620 L160 360 L300 620 Z" fill="#5a5a66"/>
+         <path d="M250 620 L450 320 L650 620 Z" fill="#6a6a76"/>
+         <path d="M560 620 L720 400 L800 620 Z" fill="#52525c"/>
+         <rect width="${W}" height="180" y="620" fill="#44444e"/>
+         <g transform="translate(430,470)">
+           <circle cx="0" cy="0" r="80" fill="#7a7a88"/>
+           <circle cx="-28" cy="-10" r="8" fill="#2a2a33"/>
+           <circle cx="28" cy="-10" r="8" fill="#2a2a33"/>
+           <path d="M-26 40 Q0 22 26 40" stroke="#2a2a33" stroke-width="5" fill="none"/>
+           <path d="M-34 6 q-6 30 -2 50" stroke="#9fb6d6" stroke-width="4" fill="none" opacity=".8"/>
+         </g>` },
+
+  { txt:`Orbi gave him her scarf and sat down, unhurried, to listen. The giant smiled for the first time in a century… and suddenly the mountains turned <b>orange</b>!`,
+    svg:`<defs><linearGradient id="org" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffb347"/><stop offset="100%" stop-color="#ff7a3a"/></linearGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#org)"/>${stars(40,W,H,'#fff6d0')}
+         <path d="M0 620 L160 360 L300 620 Z" fill="#ff8a3a"/>
+         <path d="M250 620 L450 320 L650 620 Z" fill="#ff6a2a"/>
+         <path d="M560 620 L720 400 L800 620 Z" fill="#e85a1a"/>
+         <rect width="${W}" height="180" y="620" fill="#d9531a"/>
+         <g transform="translate(470,470)">
+           <circle cx="0" cy="0" r="80" fill="#c98a5e"/>
+           <circle cx="-26" cy="-12" r="7" fill="#2a1a10"/>
+           <circle cx="26" cy="-12" r="7" fill="#2a1a10"/>
+           <path d="M-28 18 Q0 48 28 18" stroke="#2a1a10" stroke-width="6" fill="none" stroke-linecap="round"/>
+           <path d="M-50 -10 q-10 40 0 70" stroke="#ff3a6a" stroke-width="14" fill="none" stroke-linecap="round"/>
+         </g>${orbi(250,560,1.3)}` },
+
+  { txt:`"The color wasn't lost!" thought Orbi. "It was sleeping, waiting for one small act of kindness."`,
+    svg:`<defs><radialGradient id="idea" cx="50%" cy="45%" r="60%">
+          <stop offset="0%" stop-color="#ffe680"/><stop offset="100%" stop-color="#7a4bd0"/></radialGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#idea)"/>${stars(60,W,H)}
+         ${orbi(400,470,2.4)}
+         <g transform="translate(560,250)"><circle r="44" fill="#fff" opacity=".9"/>
+           <text x="0" y="16" text-anchor="middle" font-size="54">💡</text></g>
+         ${chispa(250,300,1.3)}` },
+
+  { txt:`<b>Second stop: the Planet of the Fishless Sea.</b> It was dry and cracked. An old jellyfish was searching for water so her little ones wouldn't be thirsty.`,
+    svg:`<rect width="${W}" height="${H}" fill="#caa46a"/>
+         <rect width="${W}" height="300" fill="#9a7a4a" y="500"/>
+         <path d="M0 560 L800 560" stroke="#7a5a2a" stroke-width="3"/>
+         <path d="M150 600 L250 700 M400 580 L380 720 M600 610 L680 720" stroke="#7a5a2a" stroke-width="4" fill="none"/>
+         ${stars(30,W,400,'#fff7e0')}
+         <g transform="translate(420,360)">
+           <path d="M-60 0 Q0 -80 60 0 Z" fill="#d98ad6"/>
+           <path d="M-50 0 q5 50 -2 70 M-20 4 q3 60 -2 80 M10 4 q3 60 -2 80 M40 0 q5 50 -2 70"
+                 stroke="#c06ac0" stroke-width="6" fill="none" stroke-linecap="round"/>
+           <circle cx="-18" cy="-22" r="6" fill="#fff"/><circle cx="18" cy="-22" r="6" fill="#fff"/>
+           <circle cx="-18" cy="-22" r="3" fill="#000"/><circle cx="18" cy="-22" r="3" fill="#000"/>
+         </g>` },
+
+  { txt:`Orbi and Spark dug and dug until they found a hidden spring, and shared it with everyone. The sea filled up again… and shone a beautiful <b>blue</b>!`,
+    svg:`<defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#56c8ff"/><stop offset="100%" stop-color="#1a6fd0"/></linearGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#sea)"/>${stars(40,W,300,'#fff')}
+         <path d="M0 500 Q200 460 400 500 T800 500 V800 H0 Z" fill="#2a8fe0" opacity=".7"/>
+         <path d="M0 580 Q200 540 400 580 T800 580 V800 H0 Z" fill="#1a6fd0" opacity=".8"/>
+         <circle cx="200" cy="640" r="14" fill="#d98ad6"/><circle cx="560" cy="680" r="14" fill="#9b6bff"/>
+         <circle cx="380" cy="700" r="12" fill="#ffd84d"/>
+         <g transform="translate(420,300)">
+           <path d="M-50 0 Q0 -66 50 0 Z" fill="#d98ad6"/>
+           <path d="M-40 0 q4 40 -2 56 M-12 3 q3 46 -2 60 M14 3 q3 46 -2 60 M40 0 q4 40 -2 56"
+                 stroke="#c06ac0" stroke-width="5" fill="none" stroke-linecap="round"/>
+           <path d="M-14 -18 Q0 -8 14 -18" stroke="#000" stroke-width="3" fill="none"/>
+         </g>${chispa(250,250,1.2)}` },
+
+  { txt:`<b>Third stop: the Asteroid of the Forgotten Children,</b> where many little ones had nothing to eat and nothing to play with.`,
+    svg:`<rect width="${W}" height="${H}" fill="#2a2438"/>${stars(90,W,H)}
+         <ellipse cx="400" cy="660" rx="330" ry="120" fill="#5a5266"/>
+         <ellipse cx="300" cy="640" rx="26" ry="10" fill="#4a4256"/>
+         <ellipse cx="520" cy="680" rx="34" ry="12" fill="#4a4256"/>
+         <g transform="translate(320,560)"><circle cx="0" cy="-30" r="16" fill="#8a7a9a"/><rect x="-14" y="-16" width="28" height="34" rx="8" fill="#7a6a8a"/></g>
+         <g transform="translate(410,570)"><circle cx="0" cy="-30" r="16" fill="#9a8aaa"/><rect x="-14" y="-16" width="28" height="34" rx="8" fill="#8a7a9a"/></g>
+         <g transform="translate(500,560)"><circle cx="0" cy="-30" r="16" fill="#8a7a9a"/><rect x="-14" y="-16" width="28" height="34" rx="8" fill="#7a6a8a"/></g>` },
+
+  { txt:`Orbi shared her snack and her bolts, and even let Spark glow for everyone. Laughter filled the asteroid… and a warm <b>yellow</b> was born, like a tiny little sun.`,
+    svg:`<defs><radialGradient id="sun" cx="50%" cy="40%" r="75%">
+          <stop offset="0%" stop-color="#fff4b0"/><stop offset="100%" stop-color="#ffce2e"/></radialGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#sun)"/>
+         <circle cx="400" cy="300" r="120" fill="#fff" opacity=".4"/>
+         <ellipse cx="400" cy="680" rx="340" ry="120" fill="#f2b300"/>
+         <g transform="translate(300,580)"><circle cx="0" cy="-30" r="18" fill="#c98a5e"/><rect x="-15" y="-14" width="30" height="34" rx="8" fill="#ff5a8a"/><path d="M-7 -32 Q0 -26 7 -32" stroke="#5a2a1a" stroke-width="3" fill="none"/></g>
+         <g transform="translate(500,580)"><circle cx="0" cy="-30" r="18" fill="#8a5a3a"/><rect x="-15" y="-14" width="30" height="34" rx="8" fill="#3ad1c8"/><path d="M-7 -32 Q0 -26 7 -32" stroke="#5a2a1a" stroke-width="3" fill="none"/></g>
+         ${orbi(400,560,1.3)}${chispa(580,360,1.6)}` },
+
+  { txt:`Planet after planet, Orbi discovered a secret: the colors of the universe aren't found… <b>they're given</b>. Every time someone shares, helps or comforts, a new color is born.`,
+    svg:`<defs><radialGradient id="mg" cx="50%" cy="50%" r="70%">
+          <stop offset="0%" stop-color="#3a2a7a"/><stop offset="100%" stop-color="#120a30"/></radialGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#mg)"/>${stars(70,W,H)}
+         <circle cx="200" cy="220" r="34" fill="#ff5a8a"/><circle cx="620" cy="200" r="30" fill="#3ad1c8"/>
+         <circle cx="180" cy="560" r="28" fill="#ffd84d"/><circle cx="640" cy="560" r="32" fill="#9b6bff"/>
+         <circle cx="400" cy="160" r="24" fill="#ff8a3a"/><circle cx="400" cy="640" r="26" fill="#5ad15a"/>
+         ${orbi(400,430,2.1)}` },
+
+  { txt:`Soon a trail of colors followed the little tin rocket all across the sky. Other children joined the journey, each one painting space with their own kindness.`,
+    svg:`<rect width="${W}" height="${H}" fill="#1a1248"/>${stars(70,W,H)}
+         <path d="M120 600 Q300 480 500 420 T780 240" stroke="#ff5a8a" stroke-width="16" fill="none" opacity=".8" stroke-linecap="round"/>
+         <path d="M120 630 Q300 510 500 450 T780 270" stroke="#3ad1c8" stroke-width="14" fill="none" opacity=".8" stroke-linecap="round"/>
+         <path d="M120 660 Q300 540 500 480 T780 300" stroke="#ffd84d" stroke-width="14" fill="none" opacity=".8" stroke-linecap="round"/>
+         <g transform="translate(700,230) rotate(35)">
+           <path d="M0 -34 Q14 -16 14 14 L-14 14 Q-14 -16 0 -34 Z" fill="#e6edf3"/>
+           <circle cx="0" cy="-10" r="8" fill="#7fd4ff"/>
+           <path d="M-6 14 Q0 36 6 14 Z" fill="#ff8a3a"/>
+         </g>
+         <g transform="translate(180,560)"><circle r="14" fill="#ffd84d"/></g>
+         <g transform="translate(330,500)"><circle r="12" fill="#ff5a8a"/></g>` },
+
+  { txt:`And so, little by little, the universe shone again: red from hugs, green from sharing, violet from forgiving, and gold from love.`,
+    svg:`<defs><radialGradient id="rb" cx="50%" cy="50%" r="75%">
+          <stop offset="0%" stop-color="#fff"/><stop offset="35%" stop-color="#ffd84d"/>
+          <stop offset="60%" stop-color="#ff5a8a"/><stop offset="100%" stop-color="#7a3bd0"/></radialGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#rb)"/>${stars(50,W,H,'#fff')}
+         ${planet(180,220,46,'#5ad15a','#9af09a')}
+         ${planet(640,260,54,'#ff5a8a','#ff9ab8')}
+         ${planet(220,600,50,'#7fd4ff','#bfe9ff')}
+         ${planet(620,600,42,'#b06bff','#d9b8ff')}
+         <text x="400" y="430" text-anchor="middle" font-size="120">🌈</text>` },
+
+  { txt:`Today, when you look up at the stars, remember: you too keep a hidden color. And the universe waits, patiently, for you to give it away.`,
+    svg:`<defs><linearGradient id="end" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1a1248"/><stop offset="100%" stop-color="#3a2a7a"/></linearGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#end)"/>${stars(110,W,H)}
+         <rect x="240" y="180" width="320" height="360" rx="16" fill="#0d0826" stroke="#5a4a9a" stroke-width="10"/>
+         <line x1="400" y1="180" x2="400" y2="540" stroke="#5a4a9a" stroke-width="6"/>
+         <line x1="240" y1="360" x2="560" y2="360" stroke="#5a4a9a" stroke-width="6"/>
+         <circle cx="330" cy="300" r="4" fill="#ffd84d"/><circle cx="470" cy="260" r="5" fill="#ff5a8a"/>
+         <circle cx="500" cy="440" r="4" fill="#3ad1c8"/><circle cx="300" cy="460" r="4" fill="#fff"/>
+         <g transform="translate(400,650)">
+           <circle cx="0" cy="-40" r="30" fill="#3a2418"/>
+           <rect x="-34" y="-16" width="68" height="80" rx="20" fill="#7a4bd0"/>
+           <circle cx="0" cy="18" r="14" fill="#ffd84d" opacity=".9"/>
+         </g>` },
+
+  { type:'end',
+    txt:`💛 <b>For families:</b> kindness has color. When we help those in need, the world becomes a little brighter. Part of the proceeds from this book go to charity. Thank you for reading, for sharing, and for painting the universe.`,
+    svg:`<defs><radialGradient id="fin" cx="50%" cy="40%" r="70%">
+          <stop offset="0%" stop-color="#ffe9a8"/><stop offset="100%" stop-color="#ff9ab8"/></radialGradient></defs>
+         <rect width="${W}" height="${H}" fill="url(#fin)"/>${stars(40,W,H,'#fff')}
+         <text x="400" y="300" text-anchor="middle" font-size="120">🤲</text>
+         <circle cx="400" cy="250" r="26" fill="#fff" opacity=".8"/>
+         <text x="400" y="470" text-anchor="middle" font-size="58" fill="#a83a6a">THE END</text>` },
+];
+
+const book=document.getElementById('book');
+pages.forEach((p,i)=>{
+  const div=document.createElement('div');
+  div.className='page'+(i===0?' active':'')+(p.type==='cover'?' cover':'');
+  let inner=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice">${p.svg}</svg>`;
+  if(p.type==='cover'){ inner+=p.title; }
+  else if(p.txt){ inner+=`<div class="caption">${p.txt}</div>`; }
+  div.innerHTML=inner;
+  book.appendChild(div);
+});
+let cur=0;
+const counter=document.getElementById('counter');
+const prevBtn=document.getElementById('prev');
+const nextBtn=document.getElementById('next');
+function show(n){
+  document.querySelectorAll('.page')[cur].classList.remove('active');
+  cur=Math.max(0,Math.min(pages.length-1,n));
+  document.querySelectorAll('.page')[cur].classList.add('active');
+  counter.textContent = cur===0 ? 'Cover' : (cur===pages.length-1 ? 'The End' : `Page ${cur} of ${pages.length-2}`);
+  prevBtn.disabled = cur===0;
+  nextBtn.disabled = cur===pages.length-1;
+}
+prevBtn.onclick=()=>show(cur-1);
+nextBtn.onclick=()=>show(cur+1);
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight') show(cur+1);
+  if(e.key==='ArrowLeft') show(cur-1);
+});
+show(0);
+</script>
+</body>
+</html>

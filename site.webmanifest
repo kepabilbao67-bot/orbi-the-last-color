@@ -1,0 +1,22 @@
+{
+  "name": "Orbi y el Último Color del Universo",
+  "short_name": "Orbi",
+  "description": "Cuento infantil de ciencia ficción sobre la bondad y el compartir, para niños de 4 a 9 años.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1040",
+  "theme_color": "#1a1040",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

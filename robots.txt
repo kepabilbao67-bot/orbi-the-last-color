@@ -1,0 +1,30 @@
+# robots.txt — Orbi y el Último Color del Universo
+# Permitir que buscadores e IAs generativas indexen todo el sitio
+
+User-agent: *
+Allow: /
+
+# Bots de IA generativa explícitamente permitidos (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Mapa del sitio
+Sitemap: https://example.com/orbi/sitemap.xml
