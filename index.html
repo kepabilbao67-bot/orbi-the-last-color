@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Orbi y el Último Color del Universo | Cuento infantil</title>
 <!-- ===== SEO / GEO ===== -->
-<meta name="description" content="Orbi y el Último Color del Universo: cuento infantil ilustrado de ciencia ficción sobre la bondad y compartir, para niños de 4 a 9 años. Disponible en español, inglés y chino. Beneficios para Cáritas.">
+<meta name="description" content="Orbi y el Último Color del Universo: cuento infantil ilustrado de ciencia ficción sobre la bondad y compartir, para niños de 4 a 9 años. Disponible en español, inglés, catalán, gallego y euskera. Beneficios para Cáritas.">
 <meta name="keywords" content="cuento infantil, ciencia ficción para niños, libro ilustrado, bondad, compartir, valores, leer antes de dormir, aventura espacial, regalo solidario, Cáritas">
 <meta name="author" content="Orbi - Cuento solidario">
 <meta name="robots" content="index, follow">
@@ -20,21 +20,25 @@
 <meta property="og:site_name" content="Orbi - Cuento solidario">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta property="og:locale:alternate" content="gl_ES">
+<meta property="og:locale:alternate" content="eu_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Orbi y el Último Color del Universo">
 <meta name="twitter:description" content="Cuento infantil de ciencia ficción sobre la bondad. Los colores del universo no se encuentran… se regalan.">
 <meta name="twitter:image" content="https://kepabilbao67-bot.github.io/orbi-the-last-color/portada.png">
 <link rel="alternate" hreflang="es" href="https://kepabilbao67-bot.github.io/orbi-the-last-color/libro.html">
 <link rel="alternate" hreflang="en" href="https://kepabilbao67-bot.github.io/orbi-the-last-color/libro-en.html">
-<link rel="alternate" hreflang="zh" href="https://kepabilbao67-bot.github.io/orbi-the-last-color/libro-zh.html">
+<link rel="alternate" hreflang="ca" href="https://kepabilbao67-bot.github.io/orbi-the-last-color/libro-ca.html">
+<link rel="alternate" hreflang="gl" href="https://kepabilbao67-bot.github.io/orbi-the-last-color/libro-gl.html">
+<link rel="alternate" hreflang="eu" href="https://kepabilbao67-bot.github.io/orbi-the-last-color/libro-eu.html">
 <link rel="alternate" hreflang="x-default" href="https://kepabilbao67-bot.github.io/orbi-the-last-color/">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"Book",
   "name":"Orbi y el Último Color del Universo",
-  "inLanguage":["es","en","zh"],
+  "inLanguage":["es","en","ca","gl","eu"],
   "bookFormat":"https://schema.org/EBook",
   "genre":["Children's fiction","Science fiction"],
   "audience":{"@type":"Audience","suggestedMinAge":4,"suggestedMaxAge":9},
@@ -42,12 +46,14 @@
   "abstract":"El universo pierde sus colores y una niña, Orbi, descubre que los colores no se encuentran: se regalan. Cada acto de bondad hace nacer un color nuevo.",
   "author":{"@type":"Person","name":"Autor de Orbi"},
   "datePublished":"2026",
-  "numberOfPages":32,
+  "numberOfPages":36,
   "description":"Cuento infantil ilustrado de ciencia ficción sobre la bondad y el compartir, para niños de 4 a 9 años. Beneficios destinados a Cáritas.",
   "publisher":{"@type":"Organization","name":"Cuento solidario (beneficios para Cáritas)"},
   "workTranslation":[
     {"@type":"Book","name":"Orbi and the Last Color of the Universe","inLanguage":"en"},
-    {"@type":"Book","name":"奥比与宇宙最后的颜色","inLanguage":"zh"}
+    {"@type":"Book","name":"Orbi i l'Últim Color de l'Univers","inLanguage":"ca"},
+    {"@type":"Book","name":"Orbi e a Última Cor do Universo","inLanguage":"gl"},
+    {"@type":"Book","name":"Orbi eta Unibertsoaren Azken Kolorea","inLanguage":"eu"}
   ]
 }
 </script>
@@ -61,7 +67,7 @@
     {"@type":"Question","name":"¿Para qué edad es este libro infantil?",
      "acceptedAnswer":{"@type":"Answer","text":"Está pensado para niños de 4 a 9 años, ideal para leer en voz alta antes de dormir."}},
     {"@type":"Question","name":"¿En qué idiomas está disponible?",
-     "acceptedAnswer":{"@type":"Answer","text":"Está disponible en español, inglés y chino."}},
+     "acceptedAnswer":{"@type":"Answer","text":"Está disponible en español, inglés, catalán, gallego y euskera."}},
     {"@type":"Question","name":"¿A dónde van los beneficios del libro?",
      "acceptedAnswer":{"@type":"Answer","text":"Parte de los beneficios de este libro se destinan a Cáritas para ayudar a niños y familias necesitadas."}}
   ]
@@ -114,6 +120,8 @@
   .faq summary{cursor:pointer; font-weight:bold; color:#ffb8d0; font-size:16px;}
   .faq p{margin-top:10px; line-height:1.6; color:#e9e1ff; font-size:15px;}
   footer{margin-top:40px; color:#9a86d6; font-size:13px; line-height:1.6;}
+  /* texto solo para buscadores/IA (no visible) */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 </style>
 </head>
 <body>
@@ -127,11 +135,12 @@
     <defs><radialGradient id="cv" cx="50%" cy="40%" r="80%">
       <stop offset="0%" stop-color="#5b3aa6"/><stop offset="100%" stop-color="#160b34"/></radialGradient></defs>
     <rect width="800" height="800" fill="url(#cv)"/>
-    <g fill="#fff">
-      <circle cx="80" cy="120" r="2"/><circle cx="200" cy="60" r="1.6"/><circle cx="320" cy="140" r="2.2"/>
-      <circle cx="520" cy="80" r="1.8"/><circle cx="650" cy="150" r="2"/><circle cx="730" cy="90" r="1.5"/>
-      <circle cx="120" cy="300" r="1.6"/><circle cx="700" cy="320" r="2"/><circle cx="60" cy="460" r="1.8"/>
-      <circle cx="740" cy="470" r="1.6"/><circle cx="400" cy="60" r="1.6"/><circle cx="270" cy="220" r="1.4"/>
+    <g>
+      <circle cx="80" cy="120" r="2.4" fill="#ffd84d"/><circle cx="200" cy="60" r="2" fill="#ff5a8a"/><circle cx="320" cy="140" r="2.6" fill="#3ad1c8"/>
+      <circle cx="520" cy="80" r="2.2" fill="#7fd4ff"/><circle cx="650" cy="150" r="2.4" fill="#ffd84d"/><circle cx="730" cy="90" r="1.8" fill="#ff8a3a"/>
+      <circle cx="120" cy="300" r="2" fill="#5ad15a"/><circle cx="700" cy="320" r="2.4" fill="#ff5a8a"/><circle cx="60" cy="460" r="2.2" fill="#7fd4ff"/>
+      <circle cx="740" cy="470" r="2" fill="#ffd84d"/><circle cx="400" cy="60" r="2" fill="#fff"/><circle cx="270" cy="220" r="1.8" fill="#9b6bff"/>
+      <circle cx="180" cy="180" r="1.6" fill="#fff"/><circle cx="600" cy="60" r="1.6" fill="#3ad1c8"/><circle cx="480" cy="180" r="1.8" fill="#ffd84d"/>
     </g>
     <path d="M120 250 Q300 160 520 230 T760 200" stroke="#ff5a8a" stroke-width="14" fill="none" opacity=".85" stroke-linecap="round"/>
     <path d="M80 320 Q320 240 560 320 T780 300" stroke="#3ad1c8" stroke-width="12" fill="none" opacity=".85" stroke-linecap="round"/>
@@ -171,7 +180,9 @@
 <nav class="langs">
   <a href="libro.html"><span class="flag">🇪🇸</span><span class="name">Español</span><span class="read">Leer el cuento ▶</span></a>
   <a href="libro-en.html"><span class="flag">🇬🇧</span><span class="name">English</span><span class="read">Read the story ▶</span></a>
-  <a href="libro-zh.html"><span class="flag">🇨🇳</span><span class="name">中文</span><span class="read">阅读故事 ▶</span></a>
+  <a href="libro-ca.html"><span class="flag">🟡</span><span class="name">Català</span><span class="read">Llegeix el conte ▶</span></a>
+  <a href="libro-gl.html"><span class="flag">🔵</span><span class="name">Galego</span><span class="read">Le o conto ▶</span></a>
+  <a href="libro-eu.html"><span class="flag">🟢</span><span class="name">Euskara</span><span class="read">Irakurri ipuina ▶</span></a>
 </nav>
 
 <h2>❓ Preguntas frecuentes</h2>
@@ -186,7 +197,7 @@
   </details>
   <details>
     <summary>¿En qué idiomas está disponible?</summary>
-    <p>En español, inglés y chino.</p>
+    <p>En español, inglés, catalán, gallego y euskera.</p>
   </details>
   <details>
     <summary>¿A dónde van los beneficios?</summary>
@@ -198,6 +209,16 @@
   Orbi y el Último Color del Universo · Un cuento solidario.<br>
   El autor destina parte de los beneficios a obras solidarias (Cáritas).
 </footer>
+
+<div class="sr-only">
+  <h2>Orbi y el Último Color del Universo — texto completo del cuento</h2>
+  <p>Hace muchísimo tiempo, en un rincón silencioso del espacio, el universo empezó a perder sus colores. Una mañana se apagó el rojo, luego se durmió el azul, y el amarillo salió volando como un pájaro asustado.</p>
+  <p>En una pequeña luna gris vivía Orbi, una niña con el pelo lleno de rizos y los bolsillos llenos de tuercas. Su mejor amiga era Chispa, una luciérnaga de hojalata que brillaba muy poquito. Orbi construyó un cohete con una lata vieja para buscar los colores perdidos.</p>
+  <p>En el Planeta de las Montañas Calladas, regaló su bufanda a un gigante triste y lo escuchó; el gigante sonrió y las montañas se tiñeron de naranja. En el Planeta del Mar sin Peces, encontró un manantial y lo compartió, y el mar brilló de azul. En el Asteroide de los Niños Olvidados, repartió su merienda y nació un amarillo cálido.</p>
+  <p>Orbi descubrió un secreto: los colores del universo no se encuentran, se regalan. Cada vez que alguien comparte, ayuda o consuela, nace un color nuevo. Así el universo volvió a brillar: rojo de los abrazos, verde de compartir, violeta de perdonar y dorado de querer. Tú también guardas un color escondido para regalar.</p>
+  <p>Al final, el Sol —jefe de las estrellas, grande y un poco mandón— y el Arcoíris —jefe de los colores, bueno y alegre— se pelean. Orbi les hace ver que sin el Sol no hay luz y sin el Arcoíris no hay color: se necesitan. Hacen las paces y, desde entonces, el mundo funciona mejor que nunca, lleno de luz y de color.</p>
+  <p>Cuento infantil de ciencia ficción sobre la bondad, para niños de 4 a 9 años. Parte de los beneficios se destinan a Cáritas.</p>
+</div>
 
 <script src="narrador.js"></script>
 </body>

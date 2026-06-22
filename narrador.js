@@ -10,7 +10,7 @@
   var LANG = (document.documentElement.lang || "es").slice(0, 2).toLowerCase();
 
   // Mapa de códigos de voz por idioma
-  var VOICE_LANG = { es: "es", en: "en", zh: "zh" };
+  var VOICE_LANG = { es: "es", en: "en", ca: "ca", gl: "gl", eu: "eu" };
 
   // ---------- Textos de la interfaz por idioma ----------
   var UI = {
@@ -52,24 +52,41 @@
       ],
       welcome: "Hi! I'm the book helper. Ask me anything about Orbi and the colors of the universe. 🌈"
     },
-    zh: {
-      readOn: "🔊 朗读：开启",
-      readOff: "🔇 朗读：关闭",
-      hint: "碰文字会朗读 · 碰图画会发出声音 🔊🙂",
-      askBtn: "🤖 问问这本书",
-      askTitle: "问问奥比的书",
-      placeholder: "输入你的问题……",
-      send: "发送",
-      close: "关闭",
-      suggestions: [
-        "这本书讲什么？",
-        "奥比是谁？",
-        "火花是谁？",
-        "颜色是怎么来的？",
-        "适合多大孩子？",
-        "钱用到哪里？"
-      ],
-      welcome: "你好！我是这本书的小助手。关于奥比和宇宙的颜色，你都可以问我。🌈"
+    ca: {
+      readOn: "🔊 Llegir en veu alta: ACTIVAT",
+      readOff: "🔇 Llegir en veu alta: apagat",
+      hint: "Passa el dit o el ratolí pel text i te'l llegeixo · pel dibuix i sona 🔊🙂",
+      askBtn: "🤖 Pregunta al llibre",
+      askTitle: "Pregunta al llibre de l'Orbi",
+      placeholder: "Escriu la teva pregunta...",
+      send: "Envia",
+      close: "Tanca",
+      suggestions: ["De què tracta el llibre?","Qui és l'Orbi?","Qui és l'Espurna?","Com es fan els colors?","Per a quina edat és?","On va el diner?"],
+      welcome: "Hola! Soc l'ajudant del llibre. Pregunta'm el que vulguis sobre l'Orbi i els colors de l'univers. 🌈"
+    },
+    gl: {
+      readOn: "🔊 Ler en voz alta: ACTIVADO",
+      readOff: "🔇 Ler en voz alta: apagado",
+      hint: "Pasa o dedo ou o rato polo texto e léocho · polo debuxo e soa 🔊🙂",
+      askBtn: "🤖 Pregúntalle ao libro",
+      askTitle: "Pregúntalle ao libro de Orbi",
+      placeholder: "Escribe a túa pregunta...",
+      send: "Enviar",
+      close: "Pechar",
+      suggestions: ["De que trata o libro?","Quen é Orbi?","Quen é Faísca?","Como se fan as cores?","Para que idade é?","A onde vai o diñeiro?"],
+      welcome: "Ola! Son o axudante do libro. Pregúntame o que queiras sobre Orbi e as cores do universo. 🌈"
+    },
+    eu: {
+      readOn: "🔊 Ozen irakurri: PIZTUTA",
+      readOff: "🔇 Ozen irakurri: itzalita",
+      hint: "Pasatu hatza edo sagua testutik eta irakurriko dizut · marrazkitik eta soinua 🔊🙂",
+      askBtn: "🤖 Galdetu liburuari",
+      askTitle: "Galdetu Orbiren liburuari",
+      placeholder: "Idatzi zure galdera...",
+      send: "Bidali",
+      close: "Itxi",
+      suggestions: ["Zeri buruzkoa da liburua?","Nor da Orbi?","Nor da Txinparta?","Nola sortzen dira koloreak?","Zer adinetarako da?","Nora doa dirua?"],
+      welcome: "Kaixo! Liburuaren laguntzailea naiz. Galdetu nahi duzuna Orbiri eta unibertsoaren koloreei buruz. 🌈"
     }
   }[LANG] || null;
 
@@ -122,27 +139,32 @@
       { k: ["language", "languages"],
         a: "The book is in three languages: Spanish, English and Chinese. You can switch at the top." }
     ],
-    zh: [
-      { k: ["讲什么", "故事", "内容", "关于", "简介"],
-        a: "宇宙正在失去颜色。奥比乘着铁皮火箭在太空旅行，发现一个秘密：颜色不是被找到的，而是被赠予的。每一个善举都会诞生一种新颜色。" },
-      { k: ["奥比", "主角", "女孩"],
-        a: "奥比是主角：一个勇敢的女孩，满头卷发，口袋里装满螺丝。她用一个旧罐头造了一艘火箭去拯救颜色。" },
-      { k: ["火花", "萤火虫", "朋友", "宠物"],
-        a: "火花是奥比最好的朋友：一只铁皮做的萤火虫，会发出微微的光，一路陪着她。" },
-      { k: ["颜色", "橙", "蓝", "黄", "怎么来"],
-        a: "颜色因善良而诞生：橙色来自送出的围巾，蓝色来自分享的泉水，黄色来自分给大家的点心。分享、帮助和安慰都会创造颜色！" },
-      { k: ["几岁", "年龄", "多大", "适合"],
-        a: "适合4到9岁的孩子，非常适合睡前大声朗读！" },
-      { k: ["钱", "收益", "慈善", "捐", "帮助"],
-        a: "本书的部分收益将捐给慈善机构，帮助有需要的儿童和家庭。" },
-      { k: ["教", "价值", "意义", "道理"],
-        a: "它教给孩子善良、慷慨与分享：当我们帮助别人，世界就会更明亮。" },
-      { k: ["巨人", "群山", "山"],
-        a: "在第一颗星球上，奥比遇到一个又伤心又孤单的巨人。她把围巾送给他并倾听，群山就染上了橙色。" },
-      { k: ["结局", "结尾", "最后"],
-        a: "最后，因为大家的善良，宇宙重新亮了起来。记住：你的心里也藏着一种颜色，可以送出去。🌈" },
-      { k: ["语言", "几种语言"],
-        a: "这本书有三种语言：西班牙语、英语和中文。可以在上方切换。" }
+    ca: [
+      { k: ["tracta","de què","història","resum","argument"], a: "L'univers està perdent els colors. L'Orbi viatja per l'espai en un coet de llauna i descobreix un secret: els colors no es troben, es regalen. Cada acte de bondat fa néixer un color nou." },
+      { k: ["orbi","protagonista","nena","heroïna"], a: "L'Orbi és la protagonista: una nena valenta amb els cabells arrissats i les butxaques plenes de cargols. Construeix un coet amb una llauna vella per salvar els colors." },
+      { k: ["espurna","cuca","amiga"], a: "L'Espurna és la millor amiga de l'Orbi: una cuca de llum de llauna que brilla molt poquet i l'acompanya en tot el viatge." },
+      { k: ["color","colors","taronja","blau","groc"], a: "Els colors neixen amb la bondat: el taronja en regalar una bufanda, el blau en compartir aigua i el groc en repartir el berenar. Compartir, ajudar i consolar creen colors!" },
+      { k: ["edat","anys","per a qui"], a: "És per a nens de 4 a 9 anys. Perfecte per llegir en veu alta abans de dormir!" },
+      { k: ["diner","beneficis","càritas","caritas","solidari"], a: "Part dels beneficis del llibre es destinen a Càritas, per ajudar nens i famílies que ho necessiten." },
+      { k: ["final","acaba"], a: "Al final, l'univers torna a brillar gràcies a la bondat de tothom. I recorda: tu també guardes un color amagat per regalar. 🌈" }
+    ],
+    gl: [
+      { k: ["trata","de que","historia","resumo","argumento"], a: "O universo está a perder as cores. Orbi viaxa polo espazo nun foguete de lata e descobre un segredo: as cores non se atopan, regálanse. Cada acto de bondade fai nacer unha cor nova." },
+      { k: ["orbi","protagonista","nena","heroína"], a: "Orbi é a protagonista: unha nena valente co pelo rizo e os petos cheos de porcas. Constrúe un foguete cunha lata vella para salvar as cores." },
+      { k: ["faísca","faisca","vagalume","amiga"], a: "Faísca é a mellor amiga de Orbi: un vagalume de lata que brilla moi pouquiño e acompáñaa en toda a viaxe." },
+      { k: ["cor","cores","laranxa","azul","amarelo"], a: "As cores nacen coa bondade: o laranxa ao regalar unha bufanda, o azul ao compartir auga e o amarelo ao repartir a merenda. Compartir, axudar e consolar crean cores!" },
+      { k: ["idade","anos","para quen"], a: "É para nenos de 4 a 9 anos. Perfecto para ler en voz alta antes de durmir!" },
+      { k: ["diñeiro","dineiro","beneficios","cáritas","caritas","solidario"], a: "Parte dos beneficios do libro destínanse a Cáritas, para axudar a nenos e familias que o precisan." },
+      { k: ["final","remata","acaba"], a: "Ao final, o universo volve brillar grazas á bondade de todos. E lembra: ti tamén gardas unha cor agochada para regalar. 🌈" }
+    ],
+    eu: [
+      { k: ["zeri","buruz","istorio","laburpen","kontatzen"], a: "Unibertsoa koloreak galtzen ari da. Orbik espazioan zehar bidaiatzen du lata-suziri batean eta sekretu bat aurkitzen du: koloreak ez dira aurkitzen, oparitu egiten dira. Ontasun-keinu bakoitzak kolore berri bat sortzen du." },
+      { k: ["orbi","protagonista","neska"], a: "Orbi protagonista da: neska ausarta, ile kizkurra eta poltsikoak torlojuz beteta. Lata zahar batekin suziri bat eraikitzen du koloreak salbatzeko." },
+      { k: ["txinparta","ipurtargi","lagun"], a: "Txinparta Orbiren lagunik onena da: latazko ipurtargi bat, apur bat distiratzen duena, eta bidaia osoan laguntzen diona." },
+      { k: ["kolore","koloreak","laranja","urdin","hori"], a: "Koloreak ontasunarekin sortzen dira: laranja bufanda bat oparituz, urdina ura partekatuz eta horia askaria banatuz. Partekatzeak, laguntzeak eta kontsolatzeak koloreak sortzen dituzte!" },
+      { k: ["adina","urte","norentzat"], a: "4 eta 9 urte bitarteko haurrentzat da. Lo egin aurretik ozen irakurtzeko ezin hobea!" },
+      { k: ["dirua","diru","irabazi","caritas","elkartasun"], a: "Liburuaren irabazien zati bat Caritasera bideratzen da, behar duten haur eta familiei laguntzeko." },
+      { k: ["amaiera","bukaera"], a: "Amaieran, unibertsoa berriz distiratzen da denen ontasunari esker. Eta gogoratu: zuk ere kolore ezkutu bat gordetzen duzu oparitzeko. 🌈" }
     ]
   }[LANG];
 
@@ -156,9 +178,11 @@
     });
     if (best) return best.a;
     // respuesta por defecto
-    if (LANG === "es") return "Mmm, no estoy seguro de eso. Prueba a preguntarme por Orbi, Chispa, los colores, la edad o a dónde va el dinero. 🙂";
-    if (LANG === "zh") return "嗯，这个我不太确定。你可以问我奥比、火花、颜色、适合年龄或收益去向。🙂";
-    return "Hmm, I'm not sure about that. Try asking me about Orbi, Spark, the colors, the age, or where the money goes. 🙂";
+    if (LANG === "en") return "Hmm, I'm not sure about that. Try asking me about Orbi, Spark, the colors, the age, or where the money goes. 🙂";
+    if (LANG === "ca") return "Mmm, no n'estic segur. Prova de preguntar-me per l'Orbi, l'Espurna, els colors, l'edat o on va el diner. 🙂";
+    if (LANG === "gl") return "Hmm, non estou seguro. Pregúntame por Orbi, Faísca, as cores, a idade ou a onde vai o diñeiro. 🙂";
+    if (LANG === "eu") return "Mmm, ez nago ziur. Galdetu Orbi, Txinparta, koloreak, adina edo dirua nora doan. 🙂";
+    return "Mmm, no estoy seguro de eso. Prueba a preguntarme por Orbi, Chispa, los colores, la edad o a dónde va el dinero. 🙂";
   }
 
   // ---------- Voz (Web Speech API) ----------
@@ -173,8 +197,11 @@
   function pickVoice() {
     var pref = VOICE_LANG[LANG];
     var matches = voices.filter(function (v) { return v.lang && v.lang.toLowerCase().indexOf(pref) === 0; });
-    // intentar una voz que suene femenina/infantil
-    var female = matches.find(function (v) { return /female|mujer|woman|niñ|child|kid|girl|Mónica|Sabina|Helena|Ting|Mei|Yu/i.test(v.name); });
+    // si no hay voz para catalán/gallego/euskera, usar la castellana (suena natural)
+    if (!matches.length && (LANG === "ca" || LANG === "gl" || LANG === "eu")) {
+      matches = voices.filter(function (v) { return v.lang && v.lang.toLowerCase().indexOf("es") === 0; });
+    }
+    var female = matches.find(function (v) { return /female|mujer|woman|niñ|child|kid|girl|Mónica|Sabina|Helena|Montse|Núria/i.test(v.name); });
     return female || matches[0] || null;
   }
   function speak(text) {
@@ -183,7 +210,8 @@
     var u = new SpeechSynthesisUtterance(text);
     var v = pickVoice();
     if (v) u.voice = v;
-    u.lang = (v && v.lang) || (VOICE_LANG[LANG] + (LANG === "zh" ? "-CN" : ""));
+    var region = { es: "es-ES", en: "en-GB", ca: "ca-ES", gl: "gl-ES", eu: "eu-ES" }[LANG] || "es-ES";
+    u.lang = (v && v.lang) || region;
     u.pitch = 1.6;   // tono alto -> voz más infantil
     u.rate = 0.95;   // un pelín lento para niños
     u.volume = 1;
@@ -252,24 +280,26 @@
 
   // Efectos por nombre de escena
   var FX = {
-    sparkle: function () { arp([880, 1175, 1568, 2093], 0.07, 0.18, "triangle", 0.18); },     // chispas/estrellas
-    twinkle: function () { tone(1568, 0, 0.18, "triangle", 0.2); tone(2093, 0.09, 0.2, "triangle", 0.16); }, // Chispa
-    fade:    function () { sweep(440, 120, 0.7, "sine", 0.15); },                              // colores apagándose
-    rocket:  function () { noise(0.9, 300, 0.6, 0.22); sweep(120, 600, 0.7, "sawtooth", 0.12); }, // cohete
-    sadwind: function () { noise(1.0, 220, 0.8, 0.14); },                                      // gigante triste
-    warm:    function () { arp([523, 659, 784], 0.09, 0.45, "sine", 0.2); },                   // nace un color (cálido)
-    ding:    function () { tone(1318, 0, 0.4, "sine", 0.22); },                                // idea 💡
-    dry:     function () { tone(196, 0, 0.5, "triangle", 0.14); },                             // mar seco
-    water:   function () { tone(700, 0, 0.18, "sine", 0.12); tone(520, 0.12, 0.2, "sine", 0.12); tone(880, 0.26, 0.18, "sine", 0.1); noise(0.5, 1200, 2, 0.06); }, // agua/burbujas
-    happy:   function () { arp([523, 659, 784, 1047], 0.08, 0.22, "square", 0.14); },          // risas/alegría
-    magic:   function () { sweep(400, 1600, 0.6, "triangle", 0.16); arp([1047, 1319, 1568], 0.12, 0.25, "sine", 0.12); }, // magia colores
-    rainbow: function () { arp([523, 587, 659, 698, 784, 880, 988, 1047], 0.07, 0.25, "sine", 0.16); } // arcoíris
+    sparkle: function () { arp([880, 1175, 1568, 2093, 2637], 0.07, 0.22, "triangle", 0.24); },     // chispas/estrellas
+    twinkle: function () { tone(1568, 0, 0.22, "triangle", 0.26); tone(2093, 0.09, 0.24, "triangle", 0.2); tone(2637, 0.2, 0.2, "triangle", 0.16); }, // Chispa
+    fade:    function () { sweep(520, 110, 0.9, "sine", 0.2); tone(330, 0.1, 0.6, "sine", 0.12); },  // colores apagándose
+    rocket:  function () { noise(1.1, 320, 0.6, 0.3); sweep(110, 700, 0.9, "sawtooth", 0.18); tone(80, 0, 0.9, "square", 0.12); }, // cohete 🚀
+    sadwind: function () { noise(1.3, 220, 0.8, 0.18); sweep(300, 160, 1.0, "sine", 0.08); },        // gigante triste
+    warm:    function () { arp([523, 659, 784, 1047], 0.1, 0.55, "sine", 0.26); },                   // nace un color (cálido)
+    ding:    function () { tone(1318, 0, 0.45, "sine", 0.28); tone(1976, 0.08, 0.35, "sine", 0.16); }, // idea 💡
+    dry:     function () { tone(196, 0, 0.6, "triangle", 0.18); noise(0.4, 400, 1, 0.06); },          // mar seco
+    water:   function () { tone(740, 0, 0.2, "sine", 0.16); tone(540, 0.12, 0.22, "sine", 0.16); tone(900, 0.26, 0.2, "sine", 0.14); tone(660, 0.4, 0.2, "sine", 0.12); noise(0.7, 1300, 2, 0.08); }, // agua/burbujas
+    happy:   function () { arp([523, 659, 784, 1047, 1319], 0.08, 0.26, "square", 0.18); },           // risas/alegría
+    magic:   function () { sweep(380, 1800, 0.7, "triangle", 0.2); arp([1047, 1319, 1568, 2093], 0.12, 0.3, "sine", 0.16); }, // magia colores
+    rainbow: function () { arp([523, 587, 659, 698, 784, 880, 988, 1047, 1175], 0.07, 0.3, "sine", 0.2); }, // arcoíris 🌈
+    boss:    function () { tone(90, 0, 0.6, "sawtooth", 0.22); tone(70, 0.15, 0.7, "square", 0.16); noise(0.5, 150, 1, 0.12); }, // Sol mandón 🌞
+    clash:   function () { noise(0.5, 500, 0.7, 0.3); sweep(900, 120, 0.5, "sawtooth", 0.22); tone(1200, 0, 0.12, "square", 0.22); } // pelea 💥
   };
 
   // Mapa de escena -> efecto (mismo orden de páginas en los 3 idiomas)
   // 0 portada,1 gris,2 Orbi+Chispa,3 cohete,4 gigante,5 montañas naranja,6 idea,
   // 7 mar seco,8 mar azul,9 asteroide,10 amarillo/risas,11 secreto,12 estela,13 arcoíris,14 ventana,15 fin
-  var SCENE_FX = ["sparkle","fade","twinkle","rocket","sadwind","warm","ding","dry","water","happy","happy","magic","rocket","rainbow","twinkle","warm"];
+  var SCENE_FX = ["sparkle","fade","twinkle","rocket","sadwind","warm","ding","dry","water","happy","happy","magic","rocket","rainbow","twinkle","boss","rainbow","clash","warm","rainbow","warm"];
 
   function playSceneSound() {
     if (!readEnabled) return;
@@ -373,6 +403,39 @@
   // re-cablear cuando el libro cambia de página (el contenido se regenera)
   setInterval(wireReaders, 1500);
 
+  // MÁS RUIDOS: reproducir el sonido de la escena automáticamente al pasar de página
+  var _lastIdx = null;
+  function autoSceneSound() {
+    var pages = [].slice.call(document.querySelectorAll(".page"));
+    var act = document.querySelector(".page.active");
+    var idx = act ? pages.indexOf(act) : -1;
+    if (idx !== _lastIdx) {
+      if (_lastIdx !== null && idx >= 0 && readEnabled) playSceneSound();
+      _lastIdx = idx;
+    }
+  }
+  setInterval(autoSceneSound, 400);
+
+  // DEDO EN MÓVIL/TABLET: al deslizar el dedo, leer las letras y sonar los dibujos
+  var _lastTouchEl = null;
+  document.addEventListener("touchmove", function (e) {
+    if (!readEnabled) return;
+    var t = e.touches && e.touches[0];
+    if (!t) return;
+    var el = document.elementFromPoint(t.clientX, t.clientY);
+    if (!el) return;
+    var textEl = el.closest(".caption, .story-text p, .story-text h2, .story-text h3, .cover .title, .tagline, .intro, h1, .orbi-m");
+    if (textEl) {
+      if (textEl !== _lastTouchEl) { _lastTouchEl = textEl; speak(textEl.textContent.trim()); }
+      return;
+    }
+    var svg = el.closest("svg");
+    if (svg) {
+      if (svg !== _lastTouchEl) { _lastTouchEl = svg; playSceneSound(); }
+    }
+  }, { passive: true });
+  document.addEventListener("touchend", function () { _lastTouchEl = null; });
+
   readBtn.addEventListener("click", function () {
     readEnabled = !readEnabled;
     readBtn.textContent = readEnabled ? UI.readOn : UI.readOff;
@@ -437,4 +500,42 @@
       addMsg(UI.welcome, "bot", false);
     }
   });
+
+  // ---------- Canción de cuna (al final del libro) ----------
+  if (window.ORBI_TEXT && window.ORBI_TEXT.lullaby) {
+    var L = window.ORBI_TEXT;
+    var lullBtn = document.createElement("button");
+    lullBtn.className = "orbi-btn";
+    lullBtn.style.background = "#9b6bff";
+    lullBtn.style.color = "#fff";
+    lullBtn.textContent = L.lullabyBtn || "🌙";
+    bar.insertBefore(lullBtn, hint);
+
+    var lpanel = document.createElement("div");
+    lpanel.className = "orbi-panel";
+    lpanel.innerHTML =
+      '<div class="orbi-phead"><span>' + (L.lullabyTitle || "") + '</span>' +
+      '<button class="orbi-pclose">' + UI.close + '</button></div>' +
+      '<div class="orbi-msgs" style="text-align:center;font-size:17px;line-height:1.9">' +
+      L.lullaby.map(function (line) { return '<div>' + line + '</div>'; }).join("") +
+      '</div>';
+    document.body.appendChild(lpanel);
+    lpanel.querySelector(".orbi-pclose").addEventListener("click", function () {
+      lpanel.classList.remove("open"); stopSpeak();
+    });
+
+    function playMelody() {
+      var ac = audio(); if (!ac) return;
+      var C = 261.63, D = 293.66, E = 329.63, F = 349.23, G = 392.0, A = 440.0;
+      var seq = [C, C, G, G, A, A, G, F, F, E, E, D, D, C];
+      var durs = [.5, .5, .5, .5, .5, .5, 1, .5, .5, .5, .5, .5, .5, 1];
+      var t = 0;
+      for (var i = 0; i < seq.length; i++) { tone(seq[i], t, durs[i] * 0.95, "sine", 0.12); t += durs[i]; }
+    }
+    lullBtn.addEventListener("click", function () {
+      var open = lpanel.classList.toggle("open");
+      if (open) { playMelody(); speak(L.lullaby.join(". ")); }
+      else { stopSpeak(); }
+    });
+  }
 })();
