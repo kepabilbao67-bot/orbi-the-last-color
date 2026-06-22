@@ -27,4 +27,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Mapa del sitio
-Sitemap: https://example.com/orbi/sitemap.xml
+Sitemap: https://kepabilbao67-bot.github.io/orbi-the-last-color/sitemap.xml
