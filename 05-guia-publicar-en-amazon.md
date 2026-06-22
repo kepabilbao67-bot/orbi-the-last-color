@@ -89,9 +89,19 @@ de la generosidad. Ideal para leer en voz alta antes de dormir.</p>
 
 KDP te pedirá **2 archivos**: el **interior** (las páginas) y la **portada**.
 
+> ✅ **¡Ya te los he dejado preparados en el proyecto!** No tienes que crear nada:
+> - **`orbi-libro-interior.pdf`** → el libro entero, 22 páginas a 300 ppp (con los
+>   dibujos y el texto de cada página). Sirve para subirlo como interior.
+> - **`portada-amazon-hd.jpg`** → la portada en alta resolución (1600 × 2560 px),
+>   que es justo la medida ideal del eBook de Amazon.
+>
+> Para descargarlos: ve a la página del proyecto en GitHub y pulsa en cada archivo →
+> botón **"Download"**. Luego los subes en KDP donde te los pida.
+
 ### Para el eBook
-- **Interior:** un documento con el texto y los dibujos de cada página.
-- **Portada:** una imagen (ya tienes `portada.png`).
+- **Interior:** sube **`orbi-libro-interior.pdf`** (o `portada.png` si prefieres
+  la versión cuadrada original).
+- **Portada:** sube **`portada-amazon-hd.jpg`** (la de alta resolución).
 
 ### Para la tapa blanda (papel)
 - **Interior:** un **PDF de imprenta** a 300 ppp (puntos por pulgada), tamaño
