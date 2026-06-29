@@ -49,3 +49,18 @@ Cada archivo de cuento incluye:
 > **Siguiente paso técnico:** estos 3 cuentos nuevos están en texto + prompts de
 > ilustración. Cuando quieras, puedo convertir cualquiera de ellos en un **libro
 > interactivo con dibujos** (como el Libro 1) y generar su **PDF + portada HD** para Amazon.
+
+
+
+## 📱 Lectores interactivos (web)
+Los libros 5-8 tienen **lector interactivo** en los 5 idiomas (dibujos en SVG, lectura en
+voz alta, modo noche, pantalla completa, página para colorear e impresión a PDF):
+
+- Aire: `libro-5-es.html` · `-en` · `-ca` · `-gl` · `-eu`
+- Fuego: `libro-6-es.html` (+ idiomas)
+- Agua: `libro-7-es.html` (+ idiomas)
+- Tierra: `libro-8-es.html` (+ idiomas)
+
+Se generan con `node build-lectores.js` a partir de los manuscritos (fuente única de texto).
+Motor compartido: `orbi-draw.js` (dibujos) + `orbi-engine.js` (lector). Para publicar en
+Amazon, ver `GUIA-KDP-saga-elementos.md`.
