@@ -3,6 +3,7 @@
 Cuentos infantiles de ciencia ficción tierna, para leer en voz alta (4-8 años).
 En todos aparecen **Orbi** (una niña curiosa con tuercas en el pelo) y **Chispa**
 (su luciérnaga de hojalata), que viajan por el espacio ayudando a quien lo necesita.
+Disponibles en **5 idiomas**: español, inglés, catalán, gallego y euskera.
 *Parte de los beneficios se destina a obras solidarias.*
 
 | # | Título | Valor que enseña | Estribillo | Archivo |
@@ -11,6 +12,19 @@ En todos aparecen **Orbi** (una niña curiosa con tuercas en el pelo) y **Chispa
 | 2 | **Orbi y la Estrella que no quería brillar** | la autoestima | *"brilla como solo tú sabes brillar"* | `libro-2-la-estrella.md` |
 | 3 | **Orbi y el Planeta de Basura** | cuidar la naturaleza / reciclar | *"lo que cuidas, vuelve a florecer"* | `libro-3-el-planeta-de-basura.md` |
 | 4 | **Orbi y el Robot que tenía miedo** | la valentía y la amistad | *"de la mano, el miedo se hace pequeño"* | `libro-4-el-robot-con-miedo.md` |
+
+### 🌪️🔥💧🌱 Saga de los Cuatro Elementos (libros 5-8) — en 5 idiomas
+
+| # | Título | Elemento | Valor que enseña | Estribillo | Archivo |
+|---|--------|----------|------------------|------------|---------|
+| 5 | **Orbi y el Aire enfadado** | Aire 🌪️ | la calma (saber respirar) | *"respira hondo y vuelve la calma"* | `libro-5-el-aire.md` |
+| 6 | **Orbi y la Llamita que se creía pequeña** | Fuego 🔥 | la ternura y el consuelo | *"un poquito de calor lo cambia todo"* | `libro-6-el-fuego.md` |
+| 7 | **Orbi y la Nube que no quería llover** | Agua 💧 | compartir / generosidad | *"lo que se comparte nunca se acaba"* | `libro-7-el-agua.md` |
+| 8 | **Orbi y la Semilla que tenía prisa** | Tierra 🌱 | la paciencia | *"con paciencia, todo crece"* | `libro-8-la-tierra.md` |
+
+> Los libros 5-8 incluyen el cuento completo en **los 5 idiomas** de la colección
+> (español, inglés, catalán, gallego y euskera). *Nota: las versiones en euskera
+> llevan un aviso para que un hablante nativo les dé un repaso final antes de publicar.*
 
 ## Cómo está hecho cada libro
 Cada archivo de cuento incluye:
