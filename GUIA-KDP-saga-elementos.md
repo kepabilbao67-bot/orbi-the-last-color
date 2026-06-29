@@ -8,20 +8,22 @@ Los 4 libros nuevos (5-8) ya tienen **lector interactivo en los 5 idiomas** y un
 
 ---
 
-## 1) Generar el PDF del interior (gratis, desde el navegador)
+## 1) El PDF del interior
 
-El lector ya incluye un diseño de impresión: cada escena ocupa una página.
+**Ya tienes los PDF de interior generados**, en los 5 idiomas:
+`interior-5-es.pdf` … `interior-8-eu.pdf` (formato cuadrado 8,5"×8,5", 16 páginas:
+portada + 14 escenas + página final con el estribillo).
 
-1. Abre el cuento en el idioma que quieras publicar (ej. `libro-5-es.html`).
-2. Pulsa el botón **🖨️ Guardar PDF / Imprimir** (o `Ctrl/Cmd + P`).
-3. En el diálogo de impresión:
-   - **Destino:** "Guardar como PDF".
-   - **Márgenes:** Ninguno / Mínimos.
-   - **Tamaño de papel:** elige según el formato KDP que quieras (ver abajo).
-   - Activa **"Gráficos de fondo"** (importante, para que salgan los colores).
-4. Guarda. Obtendrás un PDF con portada + 14 escenas + página para colorear.
+> Para regenerarlos: `node build-interiores.js` (usa `sharp` + `pdfkit`).
 
-> Truco: pulsa primero **⛶ Pantalla completa** para previsualizar a buen tamaño.
+⚠️ **Importante (mínimo de páginas KDP):** Amazon KDP exige **mínimo 24 páginas** para
+tapa blanda. Estos interiores tienen 16. Antes de publicar conviene **ampliarlos a 24+**
+(portadilla, dedicatoria, página "Para las familias", actividades, etc.). Si quieres,
+te los amplío automáticamente a 24 páginas.
+
+### Alternativa: exportar desde el lector web
+También puedes abrir cualquier cuento (`libro-5-es.html`…) y pulsar **🖨️ Guardar PDF /
+Imprimir** → "Guardar como PDF", activando **"Gráficos de fondo"**.
 
 ### Formato recomendado en KDP
 - **Tamaño:** cuadrado 21,59 × 21,59 cm (8,5" × 8,5"), típico de libro álbum infantil.
