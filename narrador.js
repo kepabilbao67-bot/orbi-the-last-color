@@ -168,6 +168,16 @@
     ]
   }[LANG];
 
+  // ---- Conocimiento específico del libro actual (inyectado por la página) ----
+  // window.ORBI_QA = { es: { kb:[{k,a}], suggestions:[...], welcome:"...", title:"..." } }
+  var QA = (window.ORBI_QA && window.ORBI_QA[LANG]) ? window.ORBI_QA[LANG] : null;
+  if (QA) {
+    if (QA.kb && QA.kb.length) { KB = QA.kb.concat(KB); } // las respuestas del libro actual tienen prioridad
+    if (QA.suggestions) { UI.suggestions = QA.suggestions; }
+    if (QA.welcome) { UI.welcome = QA.welcome; }
+    if (QA.title) { UI.askTitle = QA.title; }
+  }
+
   function answerFor(qRaw) {
     var q = (qRaw || "").toLowerCase();
     var best = null, bestScore = 0;
@@ -299,7 +309,7 @@
   // Mapa de escena -> efecto (mismo orden de páginas en los 3 idiomas)
   // 0 portada,1 gris,2 Orbi+Chispa,3 cohete,4 gigante,5 montañas naranja,6 idea,
   // 7 mar seco,8 mar azul,9 asteroide,10 amarillo/risas,11 secreto,12 estela,13 arcoíris,14 ventana,15 fin
-  var SCENE_FX = ["sparkle","fade","twinkle","rocket","sadwind","warm","ding","dry","water","happy","happy","magic","rocket","rainbow","twinkle","boss","rainbow","clash","warm","rainbow","warm"];
+  var SCENE_FX = window.ORBI_FX || ["sparkle","fade","twinkle","rocket","sadwind","warm","ding","dry","water","happy","happy","magic","rocket","rainbow","twinkle","boss","rainbow","clash","warm","rainbow","warm"];
 
   function playSceneSound() {
     if (!readEnabled) return;
