@@ -32,13 +32,18 @@ El lector ya incluye un diseño de impresión: cada escena ocupa una página.
 
 ## 2) La portada
 
-- La **primera página** del lector (la portada con el título) sirve como base de portada.
-- Para una portada HD: abre el cuento, ve a la portada, **⛶ Pantalla completa** y haz
-  una captura a máxima resolución; o imprime solo esa página a PDF y expórtala a imagen.
-- Mantén el **mismo estilo** que el Libro 1 (cambia solo el color dominante del elemento)
-  para que se reconozcan como serie:
-  - Aire → azul celeste · Fuego → rojo/naranja · Agua → azul · Tierra → verde.
-- Si quieres, puedo generarte **portadas HD independientes** (como `portada-amazon-hd.jpg`).
+**Ya tienes una portada HD lista para cada libro** (1600×2000 px), generada por código:
+
+- Aire → `portada-5.png` · Fuego → `portada-6.png` · Agua → `portada-7.png` · Tierra → `portada-8.png`
+
+Todas mantienen el **mismo estilo de serie** (cambia el color dominante del elemento),
+con el título, el subtítulo y la cinta "Beneficios para Cáritas".
+
+> Para regenerarlas o ajustarlas: `node build-portadas.js` (usa la librería `sharp`).
+> Si KDP te pide una portada completa (contraportada + lomo), avísame y genero el
+> wraparound con el tamaño exacto según el nº de páginas.
+
+La **primera página** del lector también sirve como base si prefieres una captura.
 
 ---
 
