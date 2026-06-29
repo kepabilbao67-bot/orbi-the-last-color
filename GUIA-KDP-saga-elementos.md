@@ -47,6 +47,20 @@ con el título, el subtítulo y la cinta "Beneficios para Cáritas".
 
 La **primera página** del lector también sirve como base si prefieres una captura.
 
+### Portada COMPLETA (wraparound) para tapa blanda — ¡ya generada!
+Para tapa blanda, KDP pide una sola imagen con **contraportada + lomo + frente**.
+Ya las tienes (JPG a 300 dpi), en los 5 idiomas:
+
+- `cover-full-5-es.jpg` … `cover-full-8-eu.jpg`
+
+Calculadas para: **8,5"×8,5"**, **24 páginas**, color premium, sangrado 3 mm.
+- Tamaño total: **5193 × 2626 px** · **lomo ≈ 17 px** (con 24 páginas KDP no permite texto en el lomo, por eso va liso).
+- La contraportada deja un **hueco claro abajo** para el código de barras que **añade KDP automáticamente** (no lo tapes con texto).
+- Regenerar: `node build-wraparound.js`. Si cambias el nº de páginas, el lomo se recalcula solo (constante `PAGES`).
+
+> Nota: la portada simple `portada-N-LANG.png` (1600×2000) sirve para el **ebook**; el
+> wraparound `cover-full-N-LANG.jpg` es para la **tapa blanda impresa**.
+
 ---
 
 ## 3) Metadatos para la ficha de cada libro
