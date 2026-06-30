@@ -44,7 +44,7 @@ const BOOKS = {
        sub: { es: "y la Llamita", en: "and the Little Flame", ca: "i la Flameta", gl: "e a Lapiña", eu: "eta sugar txikia" },
        refrain: { es: "un poquito de calor lo cambia todo", en: "a little warmth changes everything", ca: "una mica d'escalfor ho canvia tot", gl: "un pouquiño de calor cámbiao todo", eu: "bero pixka batek dena aldatzen du" },
        family: { es: "Los gestos pequeños dan calor de verdad. Recuérdale a tu peque que acompañar, abrazar o compartir ayuda muchísimo.", en: "Small gestures give real warmth. Remind your child that keeping someone company, hugging or sharing helps a lot.", ca: "Els gestos petits donen escalfor de veritat. Recorda al teu infant que acompanyar, abraçar o compartir ajuda moltíssim.", gl: "Os xestos pequenos dan calor de verdade. Lémbralle ao teu peque que acompañar, abrazar ou compartir axuda moitísimo.", eu: "Keinu txikiek benetako beroa ematen dute. Gogorarazi zure txikiari lagun egitea, besarkatzea edo partekatzea asko laguntzen duela." },
-       hero: '<circle cx="400" cy="500" r="200" fill="#ffd84d" opacity=".18"/>' + d.flame(400, 540, 2.0, "happy") },
+       hero: d.flame(400, 540, 2.0, "happy") },
   7: { md: "libro-7-el-agua.md", art: "art-7.js", c1: "#1a3a6a", c2: "#0a1c38",
        sub: { es: "y la Nube que no quería llover", en: "and the Cloud Who Wouldn't Rain", ca: "i el Núvol que no volia ploure", gl: "e a Nube que non quería chover", eu: "eta euririk egin nahi ez zuen hodeia" },
        refrain: { es: "lo que se comparte nunca se acaba", en: "what you share never runs out", ca: "el que es comparteix mai no s'acaba", gl: "o que se comparte nunca se acaba", eu: "partekatzen dena ez da inoiz agortzen" },

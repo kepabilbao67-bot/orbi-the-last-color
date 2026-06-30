@@ -26,7 +26,7 @@ const BOOKS = {
        hero: d.whirl(600, 940, 1.9, 2, "happy"), extra: "" },
   6: { c1: "#1a2450", c2: "#0a1024", subBg: "#ff8a3a", subFg: "#3a1600",
        sub: { es: "y la Llamita", en: "and the Little Flame", ca: "i la Flameta", gl: "e a Lapiña", eu: "eta sugar txikia" },
-       hero: '<circle cx="600" cy="940" r="300" fill="#ffd84d" opacity=".18"/>' + d.flame(600, 1010, 3.0, "happy"), extra: "" },
+       hero: d.flame(600, 980, 2.5, "happy"), extra: "" },
   7: { c1: "#1a3a6a", c2: "#0a1c38", subBg: "#3a8fe0", subFg: "#ffffff",
        sub: { es: "y la Nube que no quería llover", en: "and the Cloud Who Wouldn't Rain", ca: "i el Núvol que no volia ploure", gl: "e a Nube que non quería chover", eu: "eta euririk egin nahi ez zuen hodeia" },
        hero: d.cloud(600, 820, 2.5, "happy", true), extra: "" },
@@ -34,7 +34,7 @@ const BOOKS = {
        sub: { es: "y la Semilla que tenía prisa", en: "and the Seed in a Hurry", ca: "i la Llavor que tenia pressa", gl: "e a Semente que tiña présa", eu: "eta presa zuen hazia" },
        hero: '<g opacity=".35" transform="translate(900,1120) scale(2.2)">' + d.sprout(0, 0, 1, 3) + '</g>' +
              '<rect x="120" y="1180" width="960" height="160" fill="#8a5a2a"/><path d="M120 1180 Q600 1150 1080 1180" fill="#9a6a34"/>' +
-             d.sprout(600, 1180, 3.0, 1, "happy") }
+             d.sprout(600, 1180, 2.4, 1, "happy") }
 };
 
 function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
