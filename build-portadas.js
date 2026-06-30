@@ -23,7 +23,7 @@ const RIBBON = { es: "Beneficios para Cáritas", en: "Proceeds go to charity", c
 const BOOKS = {
   5: { c1: "#2a3a7a", c2: "#0b1238", subBg: "#7fc0f0", subFg: "#0d2a4a",
        sub: { es: "y el Aire enfadado", en: "and the Angry Wind", ca: "i l'Aire enfadat", gl: "e o Aire enfadado", eu: "eta haize haserrea" },
-       hero: d.whirl(600, 980, 2.6, 2, "happy"), extra: '<path d="M180 560 Q600 470 1020 560" stroke="#bfe3ff" stroke-width="14" fill="none" opacity=".4"/>' },
+       hero: d.whirl(600, 940, 1.9, 2, "happy"), extra: "" },
   6: { c1: "#1a2450", c2: "#0a1024", subBg: "#ff8a3a", subFg: "#3a1600",
        sub: { es: "y la Llamita", en: "and the Little Flame", ca: "i la Flameta", gl: "e a Lapiña", eu: "eta sugar txikia" },
        hero: '<circle cx="600" cy="940" r="300" fill="#ffd84d" opacity=".18"/>' + d.flame(600, 1010, 3.0, "happy"), extra: "" },

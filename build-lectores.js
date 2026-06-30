@@ -7,7 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const ASSET_V = "2"; // cache-busting de la saga (súbelo al cambiar assets)
+const ASSET_V = "3"; // cache-busting de la saga (súbelo al cambiar assets)
 
 const LANG_ORDER = ["es", "en", "ca", "gl", "eu"];
 const LANG_LABEL = { es: "🇪🇸 Español", en: "🇬🇧 English", ca: "🟡 Català", gl: "🔵 Galego", eu: "🟢 Euskara" };

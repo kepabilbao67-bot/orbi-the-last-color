@@ -35,7 +35,7 @@ const BOOKS = {
   5: { c1: "#2a3a7a", c2: "#0b1238", subBg: "#7fc0f0", subFg: "#0d2a4a",
        sub: { es: "y el Aire enfadado", en: "and the Angry Wind", ca: "i l'Aire enfadat", gl: "e o Aire enfadado", eu: "eta haize haserrea" },
        blurb: { es: "Remo es un torbellino que, cuando se enfada, gira tan fuerte que lo desordena todo. Junto a Orbi y a Chispa descubrirá un secreto del aire: que la rabia se hace pequeña cuando aprendemos a respirar.", en: "Remo is a whirlwind who, when he gets angry, spins so hard he messes everything up. With Orbi and Spark he'll discover a secret of the air: anger gets smaller when we learn to breathe.", ca: "En Remo és un remolí que, quan s'enfada, gira tan fort que ho desordena tot. Amb l'Orbi i l'Espurna descobrirà un secret de l'aire: la ràbia es fa petita quan aprenem a respirar.", gl: "Remo é un remuíño que, cando se enfada, xira tan forte que o desordena todo. Con Orbi e Faísca descubrirá un segredo do aire: a rabia faise pequena cando aprendemos a respirar.", eu: "Remo zurrunbilo bat da, eta haserretzen denean hain indartsu biratzen du dena nahasten duela. Orbirekin eta Txinpartarekin airearen sekretu bat aurkituko du: haserrea txikitu egiten dela arnasa hartzen ikasten dugunean." },
-       hero: () => d.whirl(frontC, 1500, 5.4, 2, "happy") },
+       hero: () => d.whirl(frontC, 1480, 4.0, 2, "happy") },
   6: { c1: "#1a2450", c2: "#0a1024", subBg: "#ff8a3a", subFg: "#3a1600",
        sub: { es: "y la Llamita", en: "and the Little Flame", ca: "i la Flameta", gl: "e a Lapiña", eu: "eta sugar txikia" },
        blurb: { es: "Ascua es una llamita tan pequeña que cree que no sirve para nada en un mundo helado. Junto a Orbi y a Chispa descubrirá que un poquito de calor —un abrazo, una compañía— lo cambia todo.", en: "Ascua is a flame so small she thinks she's useless in a frozen world. With Orbi and Spark she'll discover that a little warmth —a hug, some company— changes everything.", ca: "L'Ascua és una flameta tan petita que es pensa que no serveix de res en un món glaçat. Amb l'Orbi i l'Espurna descobrirà que una mica d'escalfor —una abraçada, companyia— ho canvia tot.", gl: "Ascua é unha lapiña tan pequena que cre que non serve de nada nun mundo xeado. Con Orbi e Faísca descubrirá que un pouquiño de calor —un abrazo, compañía— cámbiao todo.", eu: "Ascua hain sugar txikia da non izoztutako mundu batean ezertarako balio ez duela uste baitu. Orbirekin eta Txinpartarekin aurkituko du bero pixka batek —besarkada batek, lagun egiteak— dena aldatzen duela." },
@@ -113,7 +113,8 @@ function buildSvg(n, lang) {
 (async function () {
   console.log("Wraparound " + W + "x" + H + " px · lomo " + SPINE + " px (" + PAGES + " pág)");
   let count = 0;
-  for (const n of [5, 6, 7, 8]) {
+  const only = process.argv[2] ? process.argv[2].split(",").map(Number) : [5, 6, 7, 8];
+  for (const n of only) {
     for (const lang of LANGS) {
       const out = __dirname + "/cover-full-" + n + "-" + lang + ".jpg";
       await sharp(Buffer.from(buildSvg(n, lang))).jpeg({ quality: 88 }).toFile(out);

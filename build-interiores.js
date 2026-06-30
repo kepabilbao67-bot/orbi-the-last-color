@@ -177,6 +177,7 @@ async function buildBook(book) {
 }
 
 (async function () {
-  for (const book of [5, 6, 7, 8]) await buildBook(book);
-  console.log("\n20 PDF de interior (24 páginas, a color) generados.");
+  const only = process.argv[2] ? process.argv[2].split(",").map(Number) : [5, 6, 7, 8];
+  for (const book of only) await buildBook(book);
+  console.log("\n" + (only.length * 5) + " PDF de interior (24 páginas, a color) generados.");
 })();

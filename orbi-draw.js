@@ -89,17 +89,17 @@
   }
 
   // ---------- Figuras nuevas ----------
-  // Torbellino (Aire / Remo). intensity 0..3
+  // Torbellino (Aire / Remo). intensity 0..3 — cono de bandas en espiral
   function whirl(x, y, sc, intensity, mood) {
     sc = sc || 1; intensity = intensity == null ? 2 : intensity;
+    var wob = 4 + intensity * 4;
     var bands = '';
-    for (var i = 0; i < 5; i++) {
-      var w = 150 - i * 24, yy = -120 + i * 50;
-      var wob = (intensity * 8);
-      bands += '<path d="M' + (-w / 2) + ' ' + yy + ' Q0 ' + (yy - wob) + ' ' + (w / 2) + ' ' + yy + ' Q0 ' + (yy + wob) + ' ' + (-w / 2) + ' ' + yy + ' Z" fill="#bfe3ff" opacity="' + (0.55 + i * 0.08) + '"/>';
+    for (var i = 0; i < 7; i++) {
+      var cy = -118 + i * 38, rx = 132 - i * 16, dx = (i % 2 ? wob : -wob);
+      bands += '<ellipse cx="' + dx + '" cy="' + cy + '" rx="' + rx + '" ry="27" fill="' + (i % 2 ? "#cfeaff" : "#e6f4ff") + '" stroke="#bfe3ff" stroke-width="2"/>';
     }
     return '<g transform="translate(' + x + ',' + y + ') scale(' + sc + ')">' + bands +
-      '<g transform="translate(0,-95)"><circle cx="0" cy="0" r="34" fill="#dff1ff"/>' + face(0, 0, 34, '#3a6a9a', mood || 'happy') + '</g></g>';
+      '<g transform="translate(0,-126)"><circle cx="0" cy="0" r="44" fill="#f2f9ff"/>' + face(0, 0, 42, '#3a6a9a', mood || 'happy') + '</g></g>';
   }
 
   // Llama (Fuego / Ascua). size affects flame height
