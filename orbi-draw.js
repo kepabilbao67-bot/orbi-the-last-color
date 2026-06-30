@@ -102,14 +102,16 @@
       '<g transform="translate(0,-126)"><circle cx="0" cy="0" r="44" fill="#f2f9ff"/>' + face(0, 0, 42, '#3a6a9a', mood || 'happy') + '</g></g>';
   }
 
-  // Llama (Fuego / Ascua). size affects flame height
+  // Llama (Fuego / Ascua)
   function flame(x, y, sc, mood) {
     sc = sc || 1;
     return '<g transform="translate(' + x + ',' + y + ') scale(' + sc + ')">' +
-      '<ellipse cx="0" cy="60" rx="46" ry="14" fill="#7a3b00" opacity=".35"/>' +
-      '<path d="M0 -110 C50 -60 46 30 0 60 C-46 30 -50 -60 0 -110 Z" fill="#ff8a3a"/>' +
-      '<path d="M0 -70 C30 -36 28 28 0 50 C-28 28 -30 -36 0 -70 Z" fill="#ffd84d"/>' +
-      '<g transform="translate(0,0)">' + face(0, 0, 30, '#8a3b00', mood || 'happy') + '</g></g>';
+      '<path d="M0 -114 C54 -62 48 32 0 62 C-48 32 -54 -62 0 -114 Z" fill="#ff8a3a"/>' +
+      '<path d="M0 -72 C32 -36 28 30 0 50 C-28 30 -32 -36 0 -72 Z" fill="#ffd84d"/>' +
+      '<path d="M0 -34 C14 -14 12 22 0 34 C-12 22 -14 -14 0 -34 Z" fill="#fff3b0"/>' +
+      face(0, 6, 28, '#8a3b00', mood || 'happy') +
+      '<circle cx="-64" cy="-28" r="5" fill="#ffd84d"/><circle cx="62" cy="-56" r="4" fill="#ffb84d"/><circle cx="50" cy="8" r="3" fill="#fff3b0"/>' +
+      '</g>';
   }
 
   // Nube (Agua / Nimbo). rain: true/false
